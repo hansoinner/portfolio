@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sondre G — Web Developer resume, skills, projects and technical experience.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <title>Sondre G | Resume</title>
+    <link rel="canonical" href="https://hansoinner.github.io/portfolio/resume.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .resume-page { padding: 120px 0 80px; }
+        .resume-header { display:flex; justify-content:space-between; align-items:flex-end; gap:32px; margin-bottom:56px; }
+        .resume-header h1 { font-size:clamp(2.8rem,6vw,5rem); line-height:1; letter-spacing:-.06em; }
+        .resume-header p { margin-top:14px; color:var(--text-secondary); }
+        .resume-actions { display:flex; gap:12px; flex-wrap:wrap; }
+        .resume-grid { display:grid; grid-template-columns:1.5fr 1fr; gap:24px; }
+        .resume-card { padding:32px; background:#fff; border:1px solid var(--border); border-radius:var(--radius-lg); box-shadow:var(--shadow-sm); }
+        .resume-card h2 { margin-bottom:20px; font-size:1.25rem; }
+        .resume-card + .resume-card { margin-top:24px; }
+        .resume-item { padding:20px 0; border-top:1px solid var(--border-light); }
+        .resume-item:first-of-type { padding-top:0; border-top:0; }
+        .resume-item h3 { font-size:1rem; margin-bottom:5px; }
+        .resume-meta { color:var(--primary); font-size:.82rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+        .resume-item p { margin-top:8px; color:var(--text-secondary); line-height:1.7; }
+        .resume-list { display:flex; flex-wrap:wrap; gap:8px; }
+        .resume-list span { padding:8px 12px; background:var(--primary-light); color:var(--primary); border-radius:999px; font-size:.82rem; font-weight:700; }
+        @media (max-width:760px) { .resume-header,.resume-grid { grid-template-columns:1fr; display:grid; } .resume-header { align-items:start; } }
+        @media print { .header,.resume-actions,.footer { display:none!important; } .resume-page { padding:0; } .resume-card { box-shadow:none; break-inside:avoid; } body { background:#fff; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="./" class="logo" aria-label="Sondre G - Portfolio">SG</a>
+            <div class="nav-links">
+                <a href="./" class="nav-link">Portfolio</a>
+                <a href="./#projects" class="nav-link">Projects</a>
+                <a href="./#contact" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="resume-page">
+        <div class="container">
+            <header class="resume-header">
+                <div>
+                    <p class="section-eyebrow">Resume</p>
+                    <h1>Sondre G</h1>
+                    <p>Web Developer focused on responsive, accessible and practical web applications.</p>
+                </div>
+                <div class="resume-actions">
+                    <a class="button button-primary" href="javascript:window.print()">Print / Save PDF</a>
+                    <a class="button button-secondary" href="./">Back to Portfolio</a>
+                </div>
+            </header>
+
+            <div class="resume-grid">
+                <div>
+                    <section class="resume-card" aria-labelledby="profile-title">
+                        <h2 id="profile-title">Profile</h2>
+                        <p>Web developer building modern front-end experiences with HTML5, CSS3 and Vanilla JavaScript. I learn by building real projects, refining code and focusing on usability, responsiveness and maintainability.</p>
+                    </section>
+                    <section class="resume-card" aria-labelledby="projects-title">
+                        <h2 id="projects-title">Selected Projects</h2>
+                        <article class="resume-item"><h3>Personal Dashboard</h3><span class="resume-meta">Web Application</span><p>Responsive productivity dashboard with task management, notes, statistics and LocalStorage persistence.</p></article>
+                        <article class="resume-item"><h3>Todo List</h3><span class="resume-meta">JavaScript Application</span><p>Task management application with CRUD interactions, completion state, filtering and persistent browser storage.</p></article>
+                        <article class="resume-item"><h3>Weather App</h3><span class="resume-meta">Web Application</span><p>Weather interface using Fetch API and Open-Meteo to display current conditions and useful weather data.</p></article>
+                        <article class="resume-item"><h3>Developer Portfolio</h3><span class="resume-meta">Website</span><p>Responsive portfolio with project modals, accessibility features, SEO metadata and GitHub Pages deployment.</p></article>
+                    </section>
+                </div>
+                <aside>
+                    <section class="resume-card" aria-labelledby="skills-title">
+                        <h2 id="skills-title">Technical Skills</h2>
+                        <div class="resume-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive Design</span><span>Accessibility</span><span>Git</span><span>GitHub</span><span>GitHub Pages</span><span>LocalStorage</span><span>Fetch API</span></div>
+                    </section>
+                    <section class="resume-card" aria-labelledby="workflow-title">
+                        <h2 id="workflow-title">Development Workflow</h2>
+                        <div class="resume-item"><h3>Plan</h3><p>Break requirements into clear, manageable features.</p></div>
+                        <div class="resume-item"><h3>Build</h3><p>Write semantic HTML, reusable CSS and maintainable JavaScript.</p></div>
+                        <div class="resume-item"><h3>Test</h3><p>Check responsive layouts, keyboard interaction and real browser behavior.</p></div>
+                        <div class="resume-item"><h3>Deploy</h3><p>Use Git and GitHub Pages to publish and maintain projects.</p></div>
+                    </section>
+                    <section class="resume-card" aria-labelledby="contact-title">
+                        <h2 id="contact-title">Contact</h2>
+                        <p><strong>GitHub:</strong> github.com/hansoinner</p>
+                        <p style="margin-top:8px"><strong>Portfolio:</strong> hansoinner.github.io/portfolio</p>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer"><div class="container footer-content"><p>&copy; <span id="year">2026</span> Sondre G.</p><a href="./">Portfolio</a></div></footer>
+</body>
+</html>
