@@ -142,7 +142,7 @@ const projects = {
 --------------------------------------------------------- */
 
 const menuToggle = document.getElementById("menu-toggle");
-const navigation = document.getElementById("navigation");
+const navigation = document.getElementById("nav-links");
 const navLinks = document.querySelectorAll(".nav-link");
 
 
@@ -191,7 +191,7 @@ const contactForm =
     document.getElementById("contact-form");
 
 const formStatus =
-    document.getElementById("form-status");
+    document.getElementById("form-success");
 
 
 /* ---------------------------------------------------------
@@ -199,7 +199,7 @@ const formStatus =
 --------------------------------------------------------- */
 
 const currentYear =
-    document.getElementById("current-year");
+    document.getElementById("year");
 
 
 /* =========================================================
