@@ -4,32 +4,21 @@
 
 "use strict";
 
+
 /* =========================================================
    PROJECT DATA
 ========================================================= */
 
 const projects = {
-    dashboard: {
-    title: "Personal Dashboard",
-    type: "WEB APPLICATION",
-    description:
-        "A modern and responsive personal dashboard designed to organize tasks, track progress, manage notes and goals, and keep everyday information in one place.",
-    technologies: [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "LocalStorage",
-        "Responsive Design"
-    ],
-    demo: "https://hansoinner.github.io/personal-dashboard/",
-    github: "https://github.com/hansoinner/personal-dashboard"
-},
 
-    todolist: {
-        title: "Todo List",
-        type: "JAVASCRIPT APP",
+    dashboard: {
+        title: "Personal Dashboard",
+
+        type: "WEB APPLICATION",
+
         description:
-            "A responsive todo list application for creating, editing, completing and removing tasks. JavaScript manages the application state while LocalStorage keeps tasks available between browser sessions.",
+            "A modern and responsive personal dashboard designed to organize tasks, track progress, manage notes and goals, and keep everyday information in one place.",
+
         technologies: [
             "HTML5",
             "CSS3",
@@ -37,15 +26,47 @@ const projects = {
             "LocalStorage",
             "Responsive Design"
         ],
-        demo: "https://hansoinner.github.io/todo-list/",
-        github: "https://github.com/hansoinner/todo-list"
+
+        demo:
+            "https://hansoinner.github.io/personal-dashboard/",
+
+        github:
+            "https://github.com/hansoinner/personal-dashboard"
     },
+
+
+    todolist: {
+        title: "Todo List",
+
+        type: "JAVASCRIPT APP",
+
+        description:
+            "A responsive todo list application for creating, completing, filtering and removing tasks. JavaScript manages the application state while LocalStorage keeps tasks available between browser sessions.",
+
+        technologies: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "LocalStorage",
+            "Responsive Design"
+        ],
+
+        demo:
+            "https://hansoinner.github.io/todo-list/",
+
+        github:
+            "https://github.com/hansoinner/todo-list"
+    },
+
 
     portfolio: {
         title: "Developer Portfolio",
+
         type: "WEBSITE",
+
         description:
             "A responsive personal portfolio website built to showcase development skills, projects and learning progress. The site includes responsive navigation, project details, animations and a functional contact form.",
+
         technologies: [
             "HTML5",
             "CSS3",
@@ -54,30 +75,44 @@ const projects = {
             "Git",
             "GitHub Pages"
         ],
-        demo: "https://hansoinner.github.io/portfolio/",
-        github: "https://github.com/hansoinner/portfolio"
+
+        demo:
+            "https://hansoinner.github.io/portfolio/",
+
+        github:
+            "https://github.com/hansoinner/portfolio"
     },
+
 
     calculator: {
         title: "Calculator",
+
         type: "JAVASCRIPT APP",
+
         description:
             "A responsive calculator application built with HTML, CSS and vanilla JavaScript.",
+
         technologies: [
             "HTML5",
             "CSS3",
             "JavaScript",
             "Responsive Design"
         ],
+
         demo: "#",
+
         github: "#"
     },
 
+
     workout: {
         title: "Workout Program",
+
         type: "WEB APPLICATION",
+
         description:
             "A responsive workout planning application designed to organize exercises and training sessions in a simple interface.",
+
         technologies: [
             "HTML5",
             "CSS3",
@@ -85,9 +120,12 @@ const projects = {
             "Responsive Design",
             "LocalStorage"
         ],
+
         demo: "#",
+
         github: "#"
     }
+
 };
 
 
@@ -95,37 +133,67 @@ const projects = {
    DOM ELEMENTS
 ========================================================= */
 
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+const menuToggle =
+    document.getElementById("menu-toggle");
 
-const projectModal = document.getElementById("project-modal");
-const modalOverlay = document.querySelector(".modal-overlay");
-const modalClose = document.getElementById("modal-close");
+const navLinks =
+    document.getElementById("nav-links");
 
-const modalType = document.getElementById("modal-type");
-const modalTitle = document.getElementById("modal-title");
-const modalDescription = document.getElementById("modal-description");
+const projectModal =
+    document.getElementById("project-modal");
+
+const modalOverlay =
+    document.querySelector(".modal-overlay");
+
+const modalClose =
+    document.getElementById("modal-close");
+
+const modalType =
+    document.getElementById("modal-type");
+
+const modalTitle =
+    document.getElementById("modal-title");
+
+const modalDescription =
+    document.getElementById("modal-description");
 
 const modalTechnologies =
-    document.getElementById("modal-technologies-list") ||
-    document.getElementById("modal-technologies");
+    document.getElementById(
+        "modal-technologies-list"
+    );
 
-const modalDemo = document.getElementById("modal-demo");
-const modalGithub = document.getElementById("modal-github");
+const modalDemo =
+    document.getElementById("modal-demo");
 
-const contactForm = document.getElementById("contact-form");
+const modalGithub =
+    document.getElementById("modal-github");
 
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const messageInput = document.getElementById("message");
+const contactForm =
+    document.getElementById("contact-form");
 
-const nameError = document.getElementById("name-error");
-const emailError = document.getElementById("email-error");
-const messageError = document.getElementById("message-error");
+const nameInput =
+    document.getElementById("name");
 
-const formSuccess = document.getElementById("form-success");
+const emailInput =
+    document.getElementById("email");
 
-const yearElement = document.getElementById("year");
+const messageInput =
+    document.getElementById("message");
+
+const nameError =
+    document.getElementById("name-error");
+
+const emailError =
+    document.getElementById("email-error");
+
+const messageError =
+    document.getElementById("message-error");
+
+const formSuccess =
+    document.getElementById("form-success");
+
+const yearElement =
+    document.getElementById("year");
 
 
 /* =========================================================
@@ -133,14 +201,20 @@ const yearElement = document.getElementById("year");
 ========================================================= */
 
 function openNavigation() {
+
     if (!menuToggle || !navLinks) {
         return;
     }
 
     navLinks.classList.add("active");
+
     menuToggle.classList.add("active");
 
-    menuToggle.setAttribute("aria-expanded", "true");
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
     menuToggle.setAttribute(
         "aria-label",
         "Close navigation menu"
@@ -149,14 +223,20 @@ function openNavigation() {
 
 
 function closeNavigation() {
+
     if (!menuToggle || !navLinks) {
         return;
     }
 
     navLinks.classList.remove("active");
+
     menuToggle.classList.remove("active");
 
-    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
     menuToggle.setAttribute(
         "aria-label",
         "Open navigation menu"
@@ -165,11 +245,13 @@ function closeNavigation() {
 
 
 function toggleNavigation() {
+
     if (!navLinks) {
         return;
     }
 
-    const isOpen = navLinks.classList.contains("active");
+    const isOpen =
+        navLinks.classList.contains("active");
 
     if (isOpen) {
         closeNavigation();
@@ -180,17 +262,24 @@ function toggleNavigation() {
 
 
 if (menuToggle && navLinks) {
+
     menuToggle.addEventListener(
         "click",
         toggleNavigation
     );
 
-    navLinks.querySelectorAll("a").forEach((link) => {
-        link.addEventListener(
-            "click",
-            closeNavigation
-        );
-    });
+
+    navLinks
+        .querySelectorAll("a")
+        .forEach((link) => {
+
+            link.addEventListener(
+                "click",
+                closeNavigation
+            );
+
+        });
+
 }
 
 
@@ -198,119 +287,191 @@ if (menuToggle && navLinks) {
    PROJECT MODAL
 ========================================================= */
 
+let lastFocusedElement = null;
+
+
 function setupModalLink(link, url) {
+
     if (!link) {
         return;
     }
 
+
     if (!url || url === "#") {
+
         link.style.display = "none";
+
         link.removeAttribute("href");
+
         link.removeAttribute("target");
+
         link.removeAttribute("rel");
 
         return;
     }
 
+
     link.style.display = "inline-flex";
+
     link.href = url;
+
     link.target = "_blank";
-    link.rel = "noopener noreferrer";
+
+    link.rel =
+        "noopener noreferrer";
 }
 
 
-function renderProjectTechnologies(technologies) {
+function renderProjectTechnologies(
+    technologies
+) {
+
     if (!modalTechnologies) {
         return;
     }
 
+
     modalTechnologies.innerHTML = "";
 
-    technologies.forEach((technology) => {
-        const technologyTag =
-            document.createElement("span");
 
-        technologyTag.className =
-            "modal-technology";
+    technologies.forEach(
+        (technology) => {
 
-        technologyTag.textContent =
-            technology;
+            const technologyTag =
+                document.createElement(
+                    "span"
+                );
 
-        modalTechnologies.appendChild(
-            technologyTag
-        );
-    });
+            technologyTag.className =
+                "modal-technology";
+
+            technologyTag.textContent =
+                technology;
+
+            modalTechnologies.appendChild(
+                technologyTag
+            );
+
+        }
+    );
 }
 
 
 function openProjectModal(projectId) {
-    const project = projects[projectId];
+
+    const project =
+        projects[projectId];
+
 
     if (!project || !projectModal) {
         return;
     }
 
+
+    lastFocusedElement =
+        document.activeElement;
+
+
     if (modalType) {
-        modalType.textContent = project.type;
+
+        modalType.textContent =
+            project.type;
+
     }
+
 
     if (modalTitle) {
-        modalTitle.textContent = project.title;
+
+        modalTitle.textContent =
+            project.title;
+
     }
 
+
     if (modalDescription) {
+
         modalDescription.textContent =
             project.description;
+
     }
+
 
     renderProjectTechnologies(
         project.technologies
     );
+
 
     setupModalLink(
         modalDemo,
         project.demo
     );
 
+
     setupModalLink(
         modalGithub,
         project.github
     );
 
-    projectModal.classList.add("active");
+
+    projectModal.classList.add(
+        "active"
+    );
+
 
     projectModal.setAttribute(
         "aria-hidden",
         "false"
     );
 
+
     document.body.classList.add(
         "modal-open"
     );
 
+
     setTimeout(() => {
+
         if (modalClose) {
             modalClose.focus();
         }
+
     }, 50);
 }
 
 
 function closeProjectModal() {
+
     if (!projectModal) {
         return;
     }
 
-    projectModal.classList.remove("active");
+
+    projectModal.classList.remove(
+        "active"
+    );
+
 
     projectModal.setAttribute(
         "aria-hidden",
         "true"
     );
 
+
     document.body.classList.remove(
         "modal-open"
     );
+
+
+    if (
+        lastFocusedElement &&
+        typeof lastFocusedElement.focus ===
+            "function"
+    ) {
+
+        lastFocusedElement.focus();
+
+    }
+
 }
 
 
@@ -323,17 +484,26 @@ const projectDetailButtons =
         ".project-details-btn[data-modal]"
     );
 
-projectDetailButtons.forEach((button) => {
-    button.addEventListener(
-        "click",
-        () => {
-            const projectId =
-                button.dataset.modal;
 
-            openProjectModal(projectId);
-        }
-    );
-});
+projectDetailButtons.forEach(
+    (button) => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                const projectId =
+                    button.dataset.modal;
+
+                openProjectModal(
+                    projectId
+                );
+
+            }
+        );
+
+    }
+);
 
 
 /* =========================================================
@@ -341,17 +511,22 @@ projectDetailButtons.forEach((button) => {
 ========================================================= */
 
 if (modalClose) {
+
     modalClose.addEventListener(
         "click",
         closeProjectModal
     );
+
 }
 
+
 if (modalOverlay) {
+
     modalOverlay.addEventListener(
         "click",
         closeProjectModal
     );
+
 }
 
 
@@ -362,12 +537,18 @@ if (modalOverlay) {
 document.addEventListener(
     "keydown",
     (event) => {
+
         if (
             event.key === "Escape" &&
-            projectModal?.classList.contains("active")
+            projectModal?.classList.contains(
+                "active"
+            )
         ) {
+
             closeProjectModal();
+
         }
+
     }
 );
 
@@ -379,21 +560,27 @@ document.addEventListener(
 document.addEventListener(
     "keydown",
     (event) => {
+
         if (
             event.key !== "Tab" ||
-            !projectModal?.classList.contains("active")
+            !projectModal?.classList.contains(
+                "active"
+            )
         ) {
             return;
         }
+
 
         const focusableElements =
             projectModal.querySelectorAll(
                 'a[href], button:not([disabled]), input, textarea, select, [tabindex]:not([tabindex="-1"])'
             );
 
+
         if (!focusableElements.length) {
             return;
         }
+
 
         const firstElement =
             focusableElements[0];
@@ -403,21 +590,33 @@ document.addEventListener(
                 focusableElements.length - 1
             ];
 
+
         if (
             event.shiftKey &&
-            document.activeElement === firstElement
+            document.activeElement ===
+                firstElement
         ) {
+
             event.preventDefault();
+
             lastElement.focus();
+
+            return;
         }
+
 
         if (
             !event.shiftKey &&
-            document.activeElement === lastElement
+            document.activeElement ===
+                lastElement
         ) {
+
             event.preventDefault();
+
             firstElement.focus();
+
         }
+
     }
 );
 
@@ -431,19 +630,26 @@ function showError(
     errorElement,
     message
 ) {
+
     if (!input || !errorElement) {
         return;
     }
 
-    input.classList.add("has-error");
+
+    input.classList.add(
+        "has-error"
+    );
+
 
     input.setAttribute(
         "aria-invalid",
         "true"
     );
 
+
     errorElement.textContent =
         message;
+
 
     errorElement.classList.add(
         "visible"
@@ -455,20 +661,25 @@ function clearError(
     input,
     errorElement
 ) {
+
     if (!input || !errorElement) {
         return;
     }
 
+
     input.classList.remove(
         "has-error"
     );
+
 
     input.setAttribute(
         "aria-invalid",
         "false"
     );
 
+
     errorElement.textContent = "";
+
 
     errorElement.classList.remove(
         "visible"
@@ -477,14 +688,18 @@ function clearError(
 
 
 function validateName() {
+
     if (!nameInput) {
         return true;
     }
 
+
     const value =
         nameInput.value.trim();
 
+
     if (!value) {
+
         showError(
             nameInput,
             nameError,
@@ -494,7 +709,9 @@ function validateName() {
         return false;
     }
 
+
     if (value.length < 2) {
+
         showError(
             nameInput,
             nameError,
@@ -504,27 +721,34 @@ function validateName() {
         return false;
     }
 
+
     clearError(
         nameInput,
         nameError
     );
+
 
     return true;
 }
 
 
 function validateEmail() {
+
     if (!emailInput) {
         return true;
     }
 
+
     const value =
         emailInput.value.trim();
+
 
     const emailPattern =
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+
     if (!value) {
+
         showError(
             emailInput,
             emailError,
@@ -534,7 +758,9 @@ function validateEmail() {
         return false;
     }
 
+
     if (!emailPattern.test(value)) {
+
         showError(
             emailInput,
             emailError,
@@ -544,24 +770,30 @@ function validateEmail() {
         return false;
     }
 
+
     clearError(
         emailInput,
         emailError
     );
+
 
     return true;
 }
 
 
 function validateMessage() {
+
     if (!messageInput) {
         return true;
     }
 
+
     const value =
         messageInput.value.trim();
 
+
     if (!value) {
+
         showError(
             messageInput,
             messageError,
@@ -571,7 +803,9 @@ function validateMessage() {
         return false;
     }
 
+
     if (value.length < 10) {
+
         showError(
             messageInput,
             messageError,
@@ -581,10 +815,12 @@ function validateMessage() {
         return false;
     }
 
+
     clearError(
         messageInput,
         messageError
     );
+
 
     return true;
 }
@@ -595,24 +831,32 @@ function validateMessage() {
 ========================================================= */
 
 if (nameInput) {
+
     nameInput.addEventListener(
         "blur",
         validateName
     );
+
 }
 
+
 if (emailInput) {
+
     emailInput.addEventListener(
         "blur",
         validateEmail
     );
+
 }
 
+
 if (messageInput) {
+
     messageInput.addEventListener(
         "blur",
         validateMessage
     );
+
 }
 
 
@@ -621,10 +865,13 @@ if (messageInput) {
 ========================================================= */
 
 if (contactForm) {
+
     contactForm.addEventListener(
         "submit",
         async (event) => {
+
             event.preventDefault();
+
 
             const isNameValid =
                 validateName();
@@ -635,40 +882,55 @@ if (contactForm) {
             const isMessageValid =
                 validateMessage();
 
+
             if (
                 !isNameValid ||
                 !isEmailValid ||
                 !isMessageValid
             ) {
+
                 return;
+
             }
+
 
             const submitButton =
                 contactForm.querySelector(
                     ".form-submit"
                 );
 
+
             const originalButtonText =
                 submitButton
                     ? submitButton.textContent
                     : "Send Message";
 
+
             if (submitButton) {
-                submitButton.disabled = true;
+
+                submitButton.disabled =
+                    true;
 
                 submitButton.textContent =
                     "Sending...";
+
             }
 
+
             if (formSuccess) {
-                formSuccess.textContent = "";
+
+                formSuccess.textContent =
+                    "";
 
                 formSuccess.classList.remove(
                     "visible"
                 );
+
             }
 
+
             try {
+
                 const response =
                     await fetch(
                         contactForm.action,
@@ -687,64 +949,84 @@ if (contactForm) {
                         }
                     );
 
+
                 if (!response.ok) {
+
                     throw new Error(
                         "Form submission failed."
                     );
+
                 }
 
+
                 contactForm.reset();
+
 
                 clearError(
                     nameInput,
                     nameError
                 );
 
+
                 clearError(
                     emailInput,
                     emailError
                 );
+
 
                 clearError(
                     messageInput,
                     messageError
                 );
 
+
                 if (formSuccess) {
+
                     formSuccess.textContent =
                         "Thanks! Your message has been sent successfully.";
 
                     formSuccess.classList.add(
                         "visible"
                     );
+
                 }
 
             } catch (error) {
+
                 console.error(
                     "Form submission error:",
                     error
                 );
 
+
                 if (formSuccess) {
+
                     formSuccess.textContent =
                         "Something went wrong. Please try again later.";
 
                     formSuccess.classList.add(
                         "visible"
                     );
+
                 }
 
             } finally {
+
                 if (submitButton) {
+
                     submitButton.disabled =
                         false;
 
                     submitButton.textContent =
                         originalButtonText;
+
                 }
+
             }
+
         }
     );
+
 }
 
 
@@ -753,8 +1035,10 @@ if (contactForm) {
 ========================================================= */
 
 if (yearElement) {
+
     yearElement.textContent =
         new Date().getFullYear();
+
 }
 
 
@@ -767,12 +1051,16 @@ document
         "[data-placeholder-link]"
     )
     .forEach((link) => {
+
         link.addEventListener(
             "click",
             (event) => {
+
                 event.preventDefault();
+
             }
         );
+
     });
 
 
@@ -785,52 +1073,71 @@ const revealElements =
         ".reveal"
     );
 
-if ("IntersectionObserver" in window) {
+
+if (
+    "IntersectionObserver" in window
+) {
+
     const revealObserver =
         new IntersectionObserver(
             (
                 entries,
                 observer
             ) => {
+
                 entries.forEach(
                     (entry) => {
+
                         if (
                             !entry.isIntersecting
                         ) {
+
                             return;
+
                         }
+
 
                         entry.target.classList.add(
                             "visible"
                         );
 
+
                         observer.unobserve(
                             entry.target
                         );
+
                     }
                 );
+
             },
             {
                 threshold: 0.15
             }
         );
 
+
     revealElements.forEach(
         (element) => {
+
             revealObserver.observe(
                 element
             );
+
         }
     );
 
 } else {
+
     revealElements.forEach(
         (element) => {
+
             element.classList.add(
                 "visible"
             );
+
         }
     );
+
 }
 
 
@@ -843,31 +1150,41 @@ const sections =
         "main section[id]"
     );
 
+
 const navigationLinks =
     document.querySelectorAll(
         '.nav-links a[href^="#"]'
     );
 
+
 if (
     "IntersectionObserver" in window &&
     sections.length
 ) {
+
     const sectionObserver =
         new IntersectionObserver(
             (entries) => {
+
                 entries.forEach(
                     (entry) => {
+
                         if (
                             !entry.isIntersecting
                         ) {
+
                             return;
+
                         }
+
 
                         const sectionId =
                             entry.target.id;
 
+
                         navigationLinks.forEach(
                             (link) => {
+
                                 link.classList.toggle(
                                     "active",
                                     link.getAttribute(
@@ -875,10 +1192,13 @@ if (
                                     ) ===
                                     `#${sectionId}`
                                 );
+
                             }
                         );
+
                     }
                 );
+
             },
             {
                 threshold: 0.3,
@@ -888,13 +1208,17 @@ if (
             }
         );
 
+
     sections.forEach(
         (section) => {
+
             sectionObserver.observe(
                 section
             );
+
         }
     );
+
 }
 
 
@@ -904,39 +1228,53 @@ if (
 
 navigationLinks.forEach(
     (link) => {
+
         link.addEventListener(
             "click",
             (event) => {
+
                 const targetId =
                     link.getAttribute(
                         "href"
                     );
 
+
                 if (
                     !targetId ||
                     targetId === "#"
                 ) {
+
                     return;
+
                 }
+
 
                 const targetElement =
                     document.querySelector(
                         targetId
                     );
 
+
                 if (!targetElement) {
+
                     return;
+
                 }
 
+
                 event.preventDefault();
+
 
                 targetElement.scrollIntoView(
                     {
                         behavior: "smooth",
+
                         block: "start"
                     }
                 );
+
             }
         );
+
     }
 );
