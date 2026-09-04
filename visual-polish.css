@@ -118,6 +118,56 @@ html {
     min-height: 42px;
 }
 
+/* =========================================================
+   PROJECT EVIDENCE
+   Make the technical value of each project immediately visible.
+========================================================= */
+
+.project-technologies {
+    position: relative;
+    padding-top: 30px;
+}
+
+.project-technologies::before {
+    content: "Demonstrates";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #64748b;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.project-technologies::after {
+    display: block;
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 10px;
+    color: #475569;
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.project-card:nth-child(1) .project-technologies::after {
+    content: "UI state · LocalStorage · interactive components";
+}
+
+.project-card:nth-child(2) .project-technologies::after {
+    content: "CRUD operations · filtering · DOM and state management";
+}
+
+.project-card:nth-child(3) .project-technologies::after {
+    content: "Responsive UI · accessibility · SEO · GitHub Pages";
+}
+
+.project-card:nth-child(4) .project-technologies::after {
+    content: "Fetch API · async JavaScript · loading and error states";
+}
+
 .contact {
     position: relative;
 }
@@ -164,6 +214,10 @@ html {
 @media (max-width: 480px) {
     .project-actions {
         grid-template-columns: 1fr;
+    }
+
+    .project-technologies {
+        padding-top: 28px;
     }
 }
 
