@@ -969,6 +969,95 @@
 
                     </article>
 
+                    <!-- Weather App -->
+<article class="project-card reveal">
+
+    <div class="project-image">
+
+        <img
+            src="images/weather-app.png"
+            alt="Preview of the Weather App"
+            loading="lazy"
+        >
+
+        <div class="project-overlay">
+            <span class="project-status">Completed</span>
+        </div>
+
+    </div>
+
+    <div class="project-content">
+
+        <div class="project-header">
+
+            <div>
+
+                <p class="project-type">WEB APPLICATION</p>
+
+                <h3 class="project-title">
+                    Weather App
+                </h3>
+
+            </div>
+
+            <span class="project-number">
+                04
+            </span>
+
+        </div>
+
+        <p class="project-description">
+            A responsive weather application that allows users to search
+            for cities and view current weather conditions, temperature,
+            humidity, wind speed and other useful information.
+        </p>
+
+        <div
+            class="project-technologies"
+            aria-label="Technologies used"
+        >
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Fetch API</span>
+            <span>Open-Meteo API</span>
+        </div>
+
+        <div class="project-actions">
+
+            <button
+                type="button"
+                class="project-button project-button-secondary project-details-btn"
+                data-modal="weather"
+                aria-label="View details for Weather App"
+            >
+                Details
+            </button>
+
+            <a
+                href="https://hansoinner.github.io/weather-app/"
+                class="project-button project-button-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Live Demo
+            </a>
+
+            <a
+                href="https://github.com/hansoinner/weather-app"
+                class="project-button project-button-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</article>
+
                 </div>
 
             </div>
@@ -976,99 +1065,98 @@
         </section>
 
 
+<!-- =========================================================
+     PROJECT MODAL
+========================================================= -->
 
-        <!-- =================================================
-             PROJECT MODAL
-        ================================================== -->
+<div
+    class="project-modal"
+    id="project-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+    aria-describedby="modal-description"
+    aria-hidden="true"
+>
 
-        <div
-            class="project-modal"
-            id="project-modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="modal-title"
-            aria-describedby="modal-description"
-            aria-hidden="true"
-        >
+    <div class="modal-overlay"></div>
 
-            <div class="modal-overlay"></div>
+    <div class="modal-container">
 
+        <div class="modal-content">
 
-            <div class="modal-container">
+            <button
+                class="modal-close"
+                id="modal-close"
+                type="button"
+                aria-label="Close project details"
+            >
+                <span aria-hidden="true">&times;</span>
+            </button>
 
-                <div class="modal-content">
+            <!-- Project Screenshot -->
+            <div class="modal-image">
 
-                    <button
-                        class="modal-close"
-                        id="modal-close"
-                        type="button"
-                        aria-label="Close project details"
+                <img
+                    src=""
+                    alt=""
+                    id="modal-image"
+                >
+
+            </div>
+
+            <!-- Project Information -->
+            <div class="modal-info">
+
+                <p
+                    class="modal-type"
+                    id="modal-type"
+                ></p>
+
+                <h2
+                    class="modal-title"
+                    id="modal-title"
+                ></h2>
+
+                <p
+                    class="modal-description"
+                    id="modal-description"
+                ></p>
+
+                <!-- Technologies -->
+                <div class="modal-technologies">
+
+                    <h3>Technologies</h3>
+
+                    <div
+                        class="modal-technology-list"
+                        id="modal-technologies-list"
+                    ></div>
+
+                </div>
+
+                <!-- Actions -->
+                <div class="modal-actions">
+
+                    <a
+                        href="#"
+                        class="button button-primary"
+                        id="modal-demo"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
-                        <span aria-hidden="true">
-                            &times;
-                        </span>
-                    </button>
+                        Live Demo
+                    </a>
 
-
-                    <p
-                        class="modal-type"
-                        id="modal-type"
+                    <a
+                        href="#"
+                        class="button button-secondary"
+                        id="modal-github"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
-                    </p>
-
-
-                    <h2
-                        class="modal-title"
-                        id="modal-title"
-                    >
-                    </h2>
-
-
-                    <p
-                        class="modal-description"
-                        id="modal-description"
-                    >
-                    </p>
-
-
-                    <div class="modal-technologies">
-
-                        <h3>
-                            Technologies
-                        </h3>
-
-                        <div
-                            class="modal-technology-list"
-                            id="modal-technologies-list"
-                        >
-                        </div>
-
-                    </div>
-
-
-                    <div class="modal-actions">
-
-                        <a
-                            href="#"
-                            class="button button-primary"
-                            id="modal-demo"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Live Demo
-                        </a>
-
-                        <a
-                            href="#"
-                            class="button button-secondary"
-                            id="modal-github"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub
-                        </a>
-
-                    </div>
+                        GitHub
+                    </a>
 
                 </div>
 
@@ -1076,6 +1164,9 @@
 
         </div>
 
+    </div>
+
+</div>
 
 
         <!-- =================================================
