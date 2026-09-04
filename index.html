@@ -8,12 +8,23 @@
     <meta name="author" content="Sondre G">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#2563eb">
+    <meta name="color-scheme" content="light">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sondre G">
+    <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Sondre G | Web Developer">
     <meta property="og:description" content="Web developer portfolio showcasing responsive websites and web applications built with HTML, CSS and JavaScript.">
     <meta property="og:url" content="https://hansoinner.github.io/portfolio/">
     <meta property="og:image" content="https://hansoinner.github.io/portfolio/images/portfolio1.png">
+    <meta property="og:image:alt" content="Preview of Sondre G's web developer portfolio">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sondre G | Web Developer">
+    <meta name="twitter:description" content="Web developer portfolio showcasing responsive websites and web applications built with HTML, CSS and JavaScript.">
+    <meta name="twitter:image" content="https://hansoinner.github.io/portfolio/images/portfolio1.png">
+    <meta name="twitter:image:alt" content="Preview of Sondre G's web developer portfolio">
 
     <title>Sondre G | Web Developer</title>
     <link rel="canonical" href="https://hansoinner.github.io/portfolio/">
@@ -23,14 +34,16 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="header">
         <nav class="navbar container" aria-label="Main navigation">
             <a href="#home" class="logo" aria-label="Sondre G - Home">SG</a>
 
             <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="nav-links" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
 
             <div class="nav-links" id="nav-links">
@@ -43,7 +56,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero section" id="home" aria-labelledby="hero-title">
             <div class="container hero-grid">
                 <div class="hero-content reveal">
@@ -63,7 +76,7 @@
                 </div>
 
                 <div class="profile-placeholder reveal" role="img" aria-label="Sondre G profile placeholder">
-                    <span>SG</span>
+                    <span aria-hidden="true">SG</span>
                 </div>
             </div>
         </section>
@@ -85,15 +98,15 @@
 
                     <div class="timeline reveal">
                         <div class="timeline-item">
-                            <span class="timeline-number">01</span>
+                            <span class="timeline-number" aria-hidden="true">01</span>
                             <div><h3>Learn</h3><p>Strengthening my understanding of modern front-end development.</p></div>
                         </div>
                         <div class="timeline-item">
-                            <span class="timeline-number">02</span>
+                            <span class="timeline-number" aria-hidden="true">02</span>
                             <div><h3>Build</h3><p>Creating practical projects that solve real problems.</p></div>
                         </div>
                         <div class="timeline-item">
-                            <span class="timeline-number">03</span>
+                            <span class="timeline-number" aria-hidden="true">03</span>
                             <div><h3>Improve</h3><p>Refactoring, testing and improving each project over time.</p></div>
                         </div>
                     </div>
@@ -125,12 +138,12 @@
                 </div>
 
                 <div class="skills-grid">
-                    <article class="skill-card reveal"><span class="skill-number">01</span><h3>HTML5</h3><p>Semantic, accessible and well-structured markup for modern websites.</p></article>
-                    <article class="skill-card reveal"><span class="skill-number">02</span><h3>CSS3</h3><p>Responsive layouts, modern interfaces, animations and reusable styles.</p></article>
-                    <article class="skill-card reveal"><span class="skill-number">03</span><h3>JavaScript</h3><p>Interactive interfaces, DOM manipulation, application state and browser APIs.</p></article>
-                    <article class="skill-card reveal"><span class="skill-number">04</span><h3>Git &amp; GitHub</h3><p>Version control, repositories, commits and project collaboration.</p></article>
-                    <article class="skill-card reveal"><span class="skill-number">05</span><h3>Responsive Design</h3><p>Interfaces designed to work across mobile, tablet and desktop devices.</p></article>
-                    <article class="skill-card reveal"><span class="skill-number">06</span><h3>Problem Solving</h3><p>Breaking problems into manageable pieces and building practical solutions.</p></article>
+                    <article class="skill-card reveal"><span class="skill-number" aria-hidden="true">01</span><h3>HTML5</h3><p>Semantic, accessible and well-structured markup for modern websites.</p></article>
+                    <article class="skill-card reveal"><span class="skill-number" aria-hidden="true">02</span><h3>CSS3</h3><p>Responsive layouts, modern interfaces, animations and reusable styles.</p></article>
+                    <article class="skill-card reveal"><span class="skill-number" aria-hidden="true">03</span><h3>JavaScript</h3><p>Interactive interfaces, DOM manipulation, application state and browser APIs.</p></article>
+                    <article class="skill-card reveal"><span class="skill-number" aria-hidden="true">04</span><h3>Git &amp; GitHub</h3><p>Version control, repositories, commits and project collaboration.</p></article>
+                    <article class="skill-card reveal"><span class="skill-number" aria-hidden="true">05</span><h3>Responsive Design</h3><p>Interfaces designed to work across mobile, tablet and desktop devices.</p></article>
+                    <article class="skill-card reveal"><span class="skill-number" aria-hidden="true">06</span><h3>Problem Solving</h3><p>Breaking problems into manageable pieces and building practical solutions.</p></article>
                 </div>
             </div>
         </section>
@@ -146,13 +159,13 @@
                 <div class="projects-grid">
                     <article class="project-card project-card-featured reveal">
                         <div class="project-image">
-                            <img src="images/personal-dashboard.png" alt="Preview of the Personal Dashboard web application" loading="lazy">
+                            <img src="images/personal-dashboard.png" alt="Preview of the Personal Dashboard web application" loading="lazy" decoding="async">
                             <div class="project-overlay"><span class="project-status">In Development</span></div>
                         </div>
                         <div class="project-content">
                             <div class="project-header">
                                 <div><p class="project-type">WEB APPLICATION</p><h3 class="project-title">Personal Dashboard</h3></div>
-                                <span class="project-number">01</span>
+                                <span class="project-number" aria-hidden="true">01</span>
                             </div>
                             <p class="project-description">A responsive personal productivity dashboard featuring task management, notes, useful links, statistics and persistent browser storage.</p>
                             <div class="project-technologies" aria-label="Technologies used"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>LocalStorage</span></div>
@@ -166,13 +179,13 @@
 
                     <article class="project-card reveal">
                         <div class="project-image">
-                            <img src="images/todolist.png" alt="Preview of the Todo List application" loading="lazy">
+                            <img src="images/todolist.png" alt="Preview of the Todo List application" loading="lazy" decoding="async">
                             <div class="project-overlay"><span class="project-status">Completed</span></div>
                         </div>
                         <div class="project-content">
                             <div class="project-header">
                                 <div><p class="project-type">JAVASCRIPT APP</p><h3 class="project-title">Todo List</h3></div>
-                                <span class="project-number">02</span>
+                                <span class="project-number" aria-hidden="true">02</span>
                             </div>
                             <p class="project-description">A responsive task management application with task creation, completion, filtering, deletion and persistent LocalStorage data.</p>
                             <div class="project-technologies" aria-label="Technologies used"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>LocalStorage</span></div>
@@ -186,13 +199,13 @@
 
                     <article class="project-card reveal">
                         <div class="project-image">
-                            <img src="images/portfolio1.png" alt="Preview of the Sondre G developer portfolio website" loading="lazy">
+                            <img src="images/portfolio1.png" alt="Preview of the Sondre G developer portfolio website" loading="lazy" decoding="async">
                             <div class="project-overlay"><span class="project-status">Completed</span></div>
                         </div>
                         <div class="project-content">
                             <div class="project-header">
                                 <div><p class="project-type">WEBSITE</p><h3 class="project-title">Developer Portfolio</h3></div>
-                                <span class="project-number">03</span>
+                                <span class="project-number" aria-hidden="true">03</span>
                             </div>
                             <p class="project-description">A responsive personal portfolio website built to showcase development skills, projects and learning progress.</p>
                             <div class="project-technologies" aria-label="Technologies used"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>GitHub Pages</span></div>
@@ -206,13 +219,13 @@
 
                     <article class="project-card reveal">
                         <div class="project-image">
-                            <img src="images/weather-app.png" alt="Preview of the Weather App web application" loading="lazy">
+                            <img src="images/weather-app.png" alt="Preview of the Weather App web application" loading="lazy" decoding="async">
                             <div class="project-overlay"><span class="project-status">Completed</span></div>
                         </div>
                         <div class="project-content">
                             <div class="project-header">
                                 <div><p class="project-type">WEB APPLICATION</p><h3 class="project-title">Weather App</h3></div>
-                                <span class="project-number">04</span>
+                                <span class="project-number" aria-hidden="true">04</span>
                             </div>
                             <p class="project-description">A responsive weather application for searching cities and viewing current weather conditions, temperature, humidity and wind speed.</p>
                             <div class="project-technologies" aria-label="Technologies used"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Fetch API</span></div>
@@ -267,7 +280,7 @@
             <button type="button" class="modal-close" id="modal-close" aria-label="Close project details">&times;</button>
             <div class="modal-content">
                 <div class="modal-image">
-                    <img id="modal-image" src="" alt="">
+                    <img id="modal-image" src="" alt="" decoding="async">
                 </div>
                 <div class="modal-info">
                     <p class="modal-type" id="modal-type"></p>
