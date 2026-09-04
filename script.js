@@ -1,782 +1,515 @@
-// =========================
-// MOBILE NAVIGATION
-// =========================
+/* =========================================================
+   PORTFOLIO JAVASCRIPT
+========================================================= */
 
-const menuToggle =
-    document.getElementById("menu-toggle");
+"use strict";
 
-const navLinks =
-    document.getElementById("nav-links");
-
-
-if (menuToggle && navLinks) {
-
-    menuToggle.addEventListener(
-        "click",
-        () => {
-
-            navLinks.classList.toggle(
-                "active"
-            );
-
-            menuToggle.classList.toggle(
-                "active"
-            );
-
-
-            const isOpen =
-                navLinks.classList.contains(
-                    "active"
-                );
-
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                isOpen
-            );
-
-        }
-    );
-
-
-    const links =
-        navLinks.querySelectorAll("a");
-
-
-    links.forEach((link) => {
-
-        link.addEventListener(
-            "click",
-            () => {
-
-                navLinks.classList.remove(
-                    "active"
-                );
-
-                menuToggle.classList.remove(
-                    "active"
-                );
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-            }
-        );
-
-    });
-
-}
-
-
-
-// =========================
-// PROJECT MODAL
-// =========================
-
-const projectModal =
-    document.getElementById(
-        "project-modal"
-    );
-
-const modalClose =
-    document.getElementById(
-        "modal-close"
-    );
-
-const modalOverlay =
-    document.querySelector(
-        ".modal-overlay"
-    );
-
-const modalTitle =
-    document.getElementById(
-        "modal-title"
-    );
-
-const modalType =
-    document.getElementById(
-        "modal-type"
-    );
-
-const modalDescription =
-    document.getElementById(
-        "modal-description"
-    );
-
-const modalTechnologies =
-    document.getElementById(
-        "modal-technologies"
-    );
-
-const modalDemo =
-    document.getElementById(
-        "modal-demo"
-    );
-
-const modalGithub =
-    document.getElementById(
-        "modal-github"
-    );
-
-
-
-// =========================
-// PROJECT DATA
-// =========================
+/* =========================================================
+   PROJECT DATA
+========================================================= */
 
 const projects = {
-
     dashboard: {
-
-        title:
-            "Personal Dashboard",
-
-        type:
-            "WEB APPLICATION",
-
+        title: "Personal Dashboard",
+        type: "WEB APPLICATION",
         description:
-            "A personal dashboard designed to bring tasks, notes and useful information together in one clean interface. The project focuses on responsive layout, reusable components and JavaScript interactions.",
-
+            "A clean and responsive personal dashboard designed to organize tasks, notes, useful links and everyday information in one place.",
         technologies: [
-            "HTML",
-            "CSS",
-            "JavaScript"
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "LocalStorage",
+            "Responsive Design"
         ],
-
-        demo:
-            "#",
-
-        github:
-            "#"
-
+        demo: "#",
+        github: "#"
     },
 
-
-    workout: {
-
-        title:
-            "Workout Tracker",
-
-        type:
-            "WEB APPLICATION",
-
+    todolist: {
+        title: "Todo List",
+        type: "JAVASCRIPT APP",
         description:
-            "An interactive workout tracker designed to help users organize exercises and workout routines. JavaScript is used to create an interactive experience and manage user input.",
-
+            "A responsive todo list application for creating, editing, completing and removing tasks. JavaScript manages the application state while LocalStorage keeps tasks available between browser sessions.",
         technologies: [
-            "HTML",
-            "CSS",
-            "JavaScript"
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "LocalStorage",
+            "Responsive Design"
         ],
-
-        demo:
-            "#",
-
-        github:
-            "#"
-
+        demo: "https://hansoinner.github.io/todo-list/",
+        github: "https://github.com/hansoinner/todo-list"
     },
 
+    portfolio: {
+        title: "Developer Portfolio",
+        type: "WEBSITE",
+        description:
+            "A responsive personal portfolio website built to showcase development skills, projects and learning progress. The site includes responsive navigation, project details, animations and a functional contact form.",
+        technologies: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive Design",
+            "Git",
+            "GitHub Pages"
+        ],
+        demo: "https://hansoinner.github.io/portfolio/",
+        github: "https://github.com/hansoinner/portfolio"
+    },
 
     calculator: {
-
-        title:
-            "JavaScript Calculator",
-
-        type:
-            "JAVASCRIPT PROJECT",
-
+        title: "Calculator",
+        type: "JAVASCRIPT APP",
         description:
-            "A responsive calculator built from scratch using HTML, CSS and JavaScript. The project focuses on JavaScript logic, user input and handling mathematical operations.",
-
+            "A responsive calculator application built with HTML, CSS and vanilla JavaScript.",
         technologies: [
-            "HTML",
-            "CSS",
-            "JavaScript"
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive Design"
         ],
+        demo: "#",
+        github: "#"
+    },
 
-        demo:
-            "#",
-
-        github:
-            "#"
-
+    workout: {
+        title: "Workout Program",
+        type: "WEB APPLICATION",
+        description:
+            "A responsive workout planning application designed to organize exercises and training sessions in a simple interface.",
+        technologies: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive Design",
+            "LocalStorage"
+        ],
+        demo: "#",
+        github: "#"
     }
-
 };
 
+/* =========================================================
+   DOM ELEMENTS
+========================================================= */
 
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
-// =========================
-// OPEN PROJECT MODAL
-// =========================
+const projectModal = document.getElementById("project-modal");
+const modalOverlay = document.querySelector(".modal-overlay");
+const modalClose = document.getElementById("modal-close");
+const modalType = document.getElementById("modal-type");
+const modalTitle = document.getElementById("modal-title");
+const modalDescription = document.getElementById("modal-description");
+const modalTechnologies =
+    document.getElementById("modal-technologies-list") ||
+    document.getElementById("modal-technologies");
+const modalDemo = document.getElementById("modal-demo");
+const modalGithub = document.getElementById("modal-github");
+
+const contactForm = document.getElementById("contact-form");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+const nameError = document.getElementById("name-error");
+const emailError = document.getElementById("email-error");
+const messageError = document.getElementById("message-error");
+const formSuccess = document.getElementById("form-success");
+const yearElement = document.getElementById("year");
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("active");
+        menuToggle.classList.toggle("active", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            menuToggle.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+        });
+    });
+}
+
+/* =========================================================
+   PROJECT MODAL
+========================================================= */
+
+function setupModalLink(link, url) {
+    if (!link) return;
+
+    if (!url || url === "#") {
+        link.style.display = "none";
+        link.removeAttribute("href");
+        return;
+    }
+
+    link.style.display = "inline-flex";
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+}
 
 function openProjectModal(projectId) {
+    const project = projects[projectId];
 
-    if (!projectModal) {
-        return;
+    if (!project || !projectModal) return;
+
+    if (modalType) modalType.textContent = project.type;
+    if (modalTitle) modalTitle.textContent = project.title;
+    if (modalDescription) modalDescription.textContent = project.description;
+
+    if (modalTechnologies) {
+        modalTechnologies.innerHTML = "";
+
+        project.technologies.forEach((technology) => {
+            const tag = document.createElement("span");
+            tag.className = "modal-technology";
+            tag.textContent = technology;
+            modalTechnologies.appendChild(tag);
+        });
     }
 
+    setupModalLink(modalDemo, project.demo);
+    setupModalLink(modalGithub, project.github);
 
-    const project =
-        projects[projectId];
+    projectModal.classList.add("active");
+    projectModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
 
-
-    if (!project) {
-        return;
-    }
-
-
-    modalTitle.textContent =
-        project.title;
-
-    modalType.textContent =
-        project.type;
-
-    modalDescription.textContent =
-        project.description;
-
-
-    modalTechnologies.innerHTML =
-        "";
-
-
-    project.technologies.forEach(
-        (technology) => {
-
-            const tag =
-                document.createElement(
-                    "span"
-                );
-
-            tag.textContent =
-                technology;
-
-            modalTechnologies.appendChild(
-                tag
-            );
-
-        }
-    );
-
-
-    modalDemo.href =
-        project.demo;
-
-    modalGithub.href =
-        project.github;
-
-
-    projectModal.classList.add(
-        "active"
-    );
-
-    projectModal.setAttribute(
-        "aria-hidden",
-        "false"
-    );
-
-    document.body.classList.add(
-        "modal-open"
-    );
-
-
-    if (modalClose) {
-
-        modalClose.focus();
-
-    }
-
+    window.setTimeout(() => {
+        modalClose?.focus();
+    }, 50);
 }
-
-
-
-// =========================
-// CLOSE PROJECT MODAL
-// =========================
 
 function closeProjectModal() {
+    if (!projectModal) return;
 
-    if (!projectModal) {
+    projectModal.classList.remove("active");
+    projectModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+}
+
+document.querySelectorAll(".project-details-btn[data-modal]").forEach((button) => {
+    button.addEventListener("click", () => {
+        openProjectModal(button.dataset.modal);
+    });
+});
+
+modalClose?.addEventListener("click", closeProjectModal);
+modalOverlay?.addEventListener("click", closeProjectModal);
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && projectModal?.classList.contains("active")) {
+        closeProjectModal();
+    }
+});
+
+/* =========================================================
+   MODAL FOCUS TRAP
+========================================================= */
+
+document.addEventListener("keydown", (event) => {
+    if (
+        event.key !== "Tab" ||
+        !projectModal?.classList.contains("active")
+    ) {
         return;
     }
 
-
-    projectModal.classList.remove(
-        "active"
+    const focusable = projectModal.querySelectorAll(
+        'a[href], button:not([disabled]), input, textarea, select, [tabindex]:not([tabindex="-1"])'
     );
 
-    projectModal.setAttribute(
-        "aria-hidden",
-        "true"
-    );
+    if (!focusable.length) return;
 
-    document.body.classList.remove(
-        "modal-open"
-    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
 
+    if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+    }
+});
+
+/* =========================================================
+   CONTACT FORM VALIDATION
+========================================================= */
+
+function showError(input, errorElement, message) {
+    if (!input || !errorElement) return;
+
+    input.classList.add("has-error");
+    input.setAttribute("aria-invalid", "true");
+    errorElement.textContent = message;
+    errorElement.classList.add("visible");
 }
 
+function clearError(input, errorElement) {
+    if (!input || !errorElement) return;
 
+    input.classList.remove("has-error");
+    input.setAttribute("aria-invalid", "false");
+    errorElement.textContent = "";
+    errorElement.classList.remove("visible");
+}
 
-// =========================
-// PROJECT DETAIL BUTTONS
-// =========================
+function validateName() {
+    if (!nameInput) return true;
 
-const projectButtons =
-    document.querySelectorAll(
-        ".project-details-btn"
-    );
+    const value = nameInput.value.trim();
 
+    if (!value) {
+        showError(nameInput, nameError, "Please enter your name.");
+        return false;
+    }
 
-projectButtons.forEach(
-    (button) => {
-
-        button.addEventListener(
-            "click",
-            () => {
-
-                const projectId =
-                    button.dataset.modal;
-
-                openProjectModal(
-                    projectId
-                );
-
-            }
+    if (value.length < 2) {
+        showError(
+            nameInput,
+            nameError,
+            "Your name must contain at least 2 characters."
         );
-
+        return false;
     }
-);
 
-
-
-// =========================
-// CLOSE MODAL BUTTON
-// =========================
-
-if (modalClose) {
-
-    modalClose.addEventListener(
-        "click",
-        closeProjectModal
-    );
-
+    clearError(nameInput, nameError);
+    return true;
 }
 
+function validateEmail() {
+    if (!emailInput) return true;
 
+    const value = emailInput.value.trim();
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// =========================
-// CLOSE MODAL OVERLAY
-// =========================
+    if (!value) {
+        showError(emailInput, emailError, "Please enter your email address.");
+        return false;
+    }
 
-if (modalOverlay) {
+    if (!pattern.test(value)) {
+        showError(emailInput, emailError, "Please enter a valid email address.");
+        return false;
+    }
 
-    modalOverlay.addEventListener(
-        "click",
-        closeProjectModal
-    );
-
+    clearError(emailInput, emailError);
+    return true;
 }
 
+function validateMessage() {
+    if (!messageInput) return true;
 
+    const value = messageInput.value.trim();
 
-// =========================
-// ESCAPE KEY
-// =========================
-
-document.addEventListener(
-    "keydown",
-    (event) => {
-
-        if (
-            event.key === "Escape" &&
-            projectModal &&
-            projectModal.classList.contains(
-                "active"
-            )
-        ) {
-
-            closeProjectModal();
-
-        }
-
-    }
-);
-
-
-
-// =========================
-// CONTACT FORM
-// =========================
-
-const contactForm =
-    document.getElementById(
-        "contact-form"
-    );
-
-const nameInput =
-    document.getElementById(
-        "name"
-    );
-
-const emailInput =
-    document.getElementById(
-        "email"
-    );
-
-const messageInput =
-    document.getElementById(
-        "message"
-    );
-
-const nameError =
-    document.getElementById(
-        "name-error"
-    );
-
-const emailError =
-    document.getElementById(
-        "email-error"
-    );
-
-const messageError =
-    document.getElementById(
-        "message-error"
-    );
-
-const formSuccess =
-    document.getElementById(
-        "form-success"
-    );
-
-
-
-// =========================
-// VALIDATION HELPERS
-// =========================
-
-function showError(
-    input,
-    errorElement,
-    message
-) {
-
-    if (!input || !errorElement) {
-        return;
+    if (!value) {
+        showError(messageInput, messageError, "Please enter a message.");
+        return false;
     }
 
-
-    input
-        .closest(".form-group")
-        .classList.add(
-            "has-error"
+    if (value.length < 10) {
+        showError(
+            messageInput,
+            messageError,
+            "Your message must contain at least 10 characters."
         );
-
-    errorElement.textContent =
-        message;
-
-}
-
-
-function clearError(
-    input,
-    errorElement
-) {
-
-    if (!input || !errorElement) {
-        return;
+        return false;
     }
 
-
-    input
-        .closest(".form-group")
-        .classList.remove(
-            "has-error"
-        );
-
-    errorElement.textContent =
-        "";
-
+    clearError(messageInput, messageError);
+    return true;
 }
 
+nameInput?.addEventListener("blur", validateName);
+emailInput?.addEventListener("blur", validateEmail);
+messageInput?.addEventListener("blur", validateMessage);
 
-
-// =========================
-// EMAIL VALIDATION
-// =========================
-
-function isValidEmail(email) {
-
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-        .test(email);
-
-}
-
-
-
-// =========================
-// CONTACT FORM SUBMISSION
-// =========================
+/* =========================================================
+   CONTACT FORM SUBMISSION
+========================================================= */
 
 if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-    contactForm.addEventListener(
-        "submit",
-        async (event) => {
+        const valid =
+            validateName() &&
+            validateEmail() &&
+            validateMessage();
 
-            event.preventDefault();
+        if (!valid) return;
 
+        const submitButton = contactForm.querySelector(".form-submit");
+        const originalText = submitButton?.textContent || "Send Message";
 
-            let isValid = true;
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+        }
 
+        if (formSuccess) {
+            formSuccess.textContent = "";
+            formSuccess.classList.remove("visible");
+        }
 
-            clearError(
-                nameInput,
-                nameError
-            );
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: {
+                    Accept: "application/json"
+                }
+            });
 
-            clearError(
-                emailInput,
-                emailError
-            );
+            if (!response.ok) {
+                throw new Error("Form submission failed.");
+            }
 
-            clearError(
-                messageInput,
-                messageError
-            );
-
+            contactForm.reset();
+            clearError(nameInput, nameError);
+            clearError(emailInput, emailError);
+            clearError(messageInput, messageError);
 
             if (formSuccess) {
-
                 formSuccess.textContent =
-                    "";
-
+                    "Thanks! Your message has been sent successfully.";
+                formSuccess.classList.add("visible");
             }
+        } catch (error) {
+            console.error("Form submission error:", error);
 
-
-            // NAME
-
-            if (
-                nameInput.value
-                    .trim()
-                    .length < 2
-            ) {
-
-                showError(
-                    nameInput,
-                    nameError,
-                    "Please enter your name."
-                );
-
-                isValid = false;
-
-            }
-
-
-            // EMAIL
-
-            const email =
-                emailInput.value.trim();
-
-
-            if (
-                !isValidEmail(email)
-            ) {
-
-                showError(
-                    emailInput,
-                    emailError,
-                    "Please enter a valid email address."
-                );
-
-                isValid = false;
-
-            }
-
-
-            // MESSAGE
-
-            if (
-                messageInput.value
-                    .trim()
-                    .length < 10
-            ) {
-
-                showError(
-                    messageInput,
-                    messageError,
-                    "Please enter at least 10 characters."
-                );
-
-                isValid = false;
-
-            }
-
-
-            if (!isValid) {
-
-                return;
-
-            }
-
-
-            // SUBMIT
-
-            const submitButton =
-                contactForm.querySelector(
-                    ".form-submit"
-                );
-
-
-            submitButton.disabled =
-                true;
-
-            submitButton.textContent =
-                "Sending...";
-
-
-            try {
-
-                const response =
-                    await fetch(
-                        contactForm.action,
-                        {
-                            method: "POST",
-
-                            body:
-                                new FormData(
-                                    contactForm
-                                ),
-
-                            headers: {
-                                "Accept":
-                                    "application/json"
-                            }
-                        }
-                    );
-
-
-                if (response.ok) {
-
-                    formSuccess.textContent =
-                        "Thanks! Your message has been sent.";
-
-                    contactForm.reset();
-
-                } else {
-
-                    formSuccess.textContent =
-                        "Something went wrong. Please try again.";
-
-                }
-
-
-            } catch (error) {
-
+            if (formSuccess) {
                 formSuccess.textContent =
-                    "Unable to send your message. Please try again.";
-
+                    "Something went wrong. Please try again later.";
+                formSuccess.classList.add("visible");
             }
-
-
-            submitButton.disabled =
-                false;
-
-            submitButton.textContent =
-                "Send Message";
-
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }
         }
-    );
-
+    });
 }
 
+/* =========================================================
+   CURRENT YEAR
+========================================================= */
 
-
-// =========================
-// CURRENT YEAR
-// =========================
-
-const year =
-    document.getElementById(
-        "year"
-    );
-
-
-if (year) {
-
-    year.textContent =
-        new Date().getFullYear();
-
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
 }
 
+/* =========================================================
+   PLACEHOLDER LINKS
+========================================================= */
 
+document.querySelectorAll("[data-placeholder-link]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+    });
+});
 
-// =========================
-// SCROLL REVEAL
-// =========================
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
 
-const revealElements =
-    document.querySelectorAll(
-        ".section-label, .section-title, .section-description, .about-content, .journey, .technology-section, .skill-card, .featured-project, .project-card, .contact-container"
-    );
-
-
-revealElements.forEach(
-    (element) => {
-
-        element.classList.add(
-            "reveal"
-        );
-
-    }
+const revealElements = document.querySelectorAll(
+    ".reveal, .section-label, .section-title, .section-description, .about-content, .journey, .technology-section, .skill-card, .featured-project, .project-card, .contact-container"
 );
 
-
-const revealObserver =
-    new IntersectionObserver(
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
         (entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
 
-            entries.forEach(
-                (entry) => {
-
-                    if (
-                        !entry.isIntersecting
-                    ) {
-                        return;
-                    }
-
-
-                    entry.target.classList.add(
-                        "visible"
-                    );
-
-
-                    observer.unobserve(
-                        entry.target
-                    );
-
-                }
-            );
-
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            });
         },
         {
             threshold: 0.12,
-
-            rootMargin:
-                "0px 0px -50px 0px"
+            rootMargin: "0px 0px -50px 0px"
         }
     );
 
+    revealElements.forEach((element) => {
+        element.classList.add("reveal");
+        revealObserver.observe(element);
+    });
+} else {
+    revealElements.forEach((element) => {
+        element.classList.add("visible");
+    });
+}
 
-revealElements.forEach(
-    (element) => {
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
 
-        revealObserver.observe(
-            element
-        );
+const sections = document.querySelectorAll("main section[id]");
+const navigationLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
-    }
-);
+if ("IntersectionObserver" in window && sections.length) {
+    const sectionObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                const sectionId = entry.target.id;
+
+                navigationLinks.forEach((link) => {
+                    link.classList.toggle(
+                        "active",
+                        link.getAttribute("href") === `#${sectionId}`
+                    );
+                });
+            });
+        },
+        {
+            threshold: 0.2,
+            rootMargin: "-80px 0px -50% 0px"
+        }
+    );
+
+    sections.forEach((section) => sectionObserver.observe(section));
+}
+
+/* =========================================================
+   SMOOTH SCROLL
+========================================================= */
+
+navigationLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+        const targetId = link.getAttribute("href");
+
+        if (!targetId || targetId === "#") return;
+
+        const target = document.querySelector(targetId);
+        if (!target) return;
+
+        event.preventDefault();
+
+        target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+});
