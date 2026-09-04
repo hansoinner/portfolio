@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+
+    <!-- =====================================================
+         META
+    ====================================================== -->
 
     <meta
         name="viewport"
@@ -12,192 +14,238 @@
 
     <meta
         name="description"
-        content="Personal portfolio website for Sondre G, a web developer."
+        content="Sondre G — Web developer portfolio showcasing projects built with HTML, CSS and JavaScript."
     >
 
-    <title>
-        Sondre G | Web Developer
-    </title>
+    <meta
+        name="author"
+        content="Sondre G"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#2563eb"
+    >
+
+
+    <!-- =====================================================
+         TITLE
+    ====================================================== -->
+
+    <title>Sondre G | Web Developer</title>
+
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232563eb'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Arial,sans-serif' font-size='48' font-weight='700' fill='white'%3ESG%3C/text%3E%3C/svg%3E"
+    >
+
+
+    <!-- =====================================================
+         STYLESHEET
+    ====================================================== -->
 
     <link
         rel="stylesheet"
         href="style.css"
     >
-
 </head>
 
 
 <body>
 
-
-    <!-- =========================
+    <!-- =====================================================
          HEADER
-    ========================== -->
+    ====================================================== -->
 
-    <header>
+    <header class="header">
 
-        <nav class="navbar">
+        <nav
+            class="navbar container"
+            aria-label="Main navigation"
+        >
+
+            <!-- Logo -->
 
             <a
                 href="#home"
                 class="logo"
+                aria-label="Sondre Giæver - Home"
             >
-                Sondre
+                SG
             </a>
 
+
+            <!-- Mobile navigation button -->
 
             <button
                 class="menu-toggle"
                 id="menu-toggle"
-                aria-label="Toggle navigation"
-                aria-expanded="false"
                 type="button"
+                aria-label="Open navigation menu"
+                aria-controls="nav-links"
+                aria-expanded="false"
             >
-
                 <span></span>
                 <span></span>
                 <span></span>
-
             </button>
 
 
-            <ul
+            <!-- Navigation links -->
+
+            <div
                 class="nav-links"
                 id="nav-links"
             >
 
-                <li>
-                    <a href="#home">
-                        Home
-                    </a>
-                </li>
+                <a
+                    href="#home"
+                    class="nav-link active"
+                >
+                    Home
+                </a>
 
-                <li>
-                    <a href="#about">
-                        About
-                    </a>
-                </li>
+                <a
+                    href="#about"
+                    class="nav-link"
+                >
+                    About
+                </a>
 
-                <li>
-                    <a href="#skills">
-                        Skills
-                    </a>
-                </li>
+                <a
+                    href="#skills"
+                    class="nav-link"
+                >
+                    Skills
+                </a>
 
-                <li>
-                    <a href="#projects">
-                        Projects
-                    </a>
-                </li>
+                <a
+                    href="#projects"
+                    class="nav-link"
+                >
+                    Projects
+                </a>
 
-                <li>
-                    <a href="#contact">
-                        Contact
-                    </a>
-                </li>
+                <a
+                    href="#contact"
+                    class="nav-link"
+                >
+                    Contact
+                </a>
 
-            </ul>
+            </div>
 
         </nav>
 
     </header>
 
 
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
 
     <main>
 
 
-        <!-- =========================
+        <!-- =================================================
              HERO
-        ========================== -->
+        ================================================== -->
 
         <section
+            class="hero section"
             id="home"
-            class="hero"
+            aria-labelledby="hero-title"
         >
 
-            <div class="hero-content">
+            <div class="container hero-grid">
 
 
-                <div class="hero-text-content">
+                <!-- Hero content -->
 
-                    <p class="intro">
+                <div class="hero-content reveal">
+
+                    <p class="hero-intro">
                         Hello, I'm
                     </p>
 
-                    <h1>
-                        Sondre
+                    <h1
+                        class="hero-title"
+                        id="hero-title"
+                    >
+                        Sondre Giæver
                     </h1>
 
-                    <h2>
+                    <p class="hero-subtitle">
                         Web Developer
-                    </h2>
+                    </p>
 
-                    <p class="hero-text">
-                        I build clean, responsive and
-                        user-friendly websites and web
-                        applications using modern web
-                        technologies.
+                    <p class="hero-description">
+                        I build clean, responsive and user-focused
+                        websites and web applications using modern
+                        HTML, CSS and JavaScript.
                     </p>
 
 
-                    <div class="hero-buttons">
+                    <!-- Hero actions -->
+
+                    <div class="hero-actions">
 
                         <a
                             href="#projects"
-                            class="btn primary-btn"
+                            class="button button-primary"
                         >
                             View My Work
                         </a>
 
                         <a
                             href="#contact"
-                            class="btn secondary-btn"
+                            class="button button-secondary"
                         >
-                            Contact Me
+                            Get In Touch
                         </a>
 
                     </div>
 
 
-                    <div class="social-links">
+                    <!-- Social links -->
+
+                    <div
+                        class="hero-socials"
+                        aria-label="Social links"
+                    >
 
                         <a
-                            href="https://github.com/"
+                            href="https://github.com/hansoinner"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="GitHub profile"
                         >
                             GitHub
                         </a>
 
-                        <a
-                            href="https://www.linkedin.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            LinkedIn
-                        </a>
-
-                        <a
-                            href="mailto:your@email.com"
-                        >
-                            Email
-                        </a>
-
                     </div>
 
                 </div>
 
 
-                <div class="hero-image">
+                <!-- Profile placeholder -->
 
-                    <div class="profile-placeholder">
+                <div
+                    class="profile-placeholder reveal"
+                    aria-label="Profile placeholder"
+                >
 
-                        <span>
-                            SG
-                        </span>
-
-                    </div>
+                    <span>SG</span>
 
                 </div>
 
@@ -207,654 +255,190 @@
 
 
 
-        <!-- =========================
+        <!-- =================================================
              ABOUT
-        ========================== -->
+        ================================================== -->
 
         <section
+            class="about section"
             id="about"
-            class="section about-section"
+            aria-labelledby="about-title"
         >
 
             <div class="container">
 
 
-                <div class="about-grid">
-
-
-                    <div class="about-content">
-
-                        <p class="section-label">
-                            ABOUT ME
-                        </p>
-
-                        <h2 class="section-title">
-                            I'm learning by building.
-                        </h2>
-
-
-                        <p class="about-intro">
-                            I'm a beginner web developer
-                            focused on learning how to build
-                            useful, modern and responsive
-                            websites.
-                        </p>
-
-
-                        <p>
-                            I enjoy taking an idea and turning
-                            it into a working website using
-                            HTML, CSS and JavaScript.
-                        </p>
-
-
-                        <p>
-                            My current focus is improving my
-                            JavaScript skills, building more
-                            projects and learning how to turn
-                            those skills into professional
-                            web development work.
-                        </p>
-
-
-                        <div class="about-actions">
-
-                            <a
-                                href="#projects"
-                                class="btn primary-btn"
-                            >
-                                See My Projects
-                            </a>
-
-                            <a
-                                href="#contact"
-                                class="btn secondary-btn"
-                            >
-                                Get In Touch
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="journey">
-
-                        <h3>
-                            My Learning Journey
-                        </h3>
-
-
-                        <div class="timeline">
-
-
-                            <div class="timeline-item">
-
-                                <div class="timeline-number">
-                                    01
-                                </div>
-
-                                <div>
-
-                                    <h4>
-                                        HTML
-                                    </h4>
-
-                                    <p>
-                                        Learning how to structure
-                                        semantic and accessible
-                                        web pages.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="timeline-item">
-
-                                <div class="timeline-number">
-                                    02
-                                </div>
-
-                                <div>
-
-                                    <h4>
-                                        CSS
-                                    </h4>
-
-                                    <p>
-                                        Creating responsive
-                                        layouts, typography,
-                                        spacing and visual
-                                        design.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="timeline-item">
-
-                                <div class="timeline-number">
-                                    03
-                                </div>
-
-                                <div>
-
-                                    <h4>
-                                        JavaScript
-                                    </h4>
-
-                                    <p>
-                                        Adding interactivity,
-                                        logic and dynamic
-                                        functionality.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="timeline-item">
-
-                                <div class="timeline-number">
-                                    04
-                                </div>
-
-                                <div>
-
-                                    <h4>
-                                        Building Projects
-                                    </h4>
-
-                                    <p>
-                                        Applying what I learn
-                                        by creating practical
-                                        projects.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="technology-section">
-
-                    <h3>
-                        Technologies
-                    </h3>
-
-
-                    <div class="technology-list">
-
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Git</span>
-                        <span>GitHub</span>
-                        <span>VS Code</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             SKILLS
-        ========================== -->
-
-        <section
-            id="skills"
-            class="section skills-section"
-        >
-
-            <div class="container">
-
-                <p class="section-label">
-                    SKILLS
-                </p>
-
-                <h2 class="section-title">
-                    Technologies I Work With
-                </h2>
-
-                <p class="section-description">
-                    These are the technologies and tools I'm
-                    currently using to build websites and web
-                    applications.
-                </p>
-
-
-                <div class="skills-grid">
-
-
-                    <article class="skill-card">
-
-                        <div class="skill-icon">
-                            &lt;/&gt;
-                        </div>
-
-                        <h3>
-                            Frontend Development
-                        </h3>
-
-                        <p>
-                            Building responsive, accessible
-                            and interactive interfaces for
-                            the web.
-                        </p>
-
-
-                        <div class="skill-tags">
-
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>Responsive Design</span>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <article class="skill-card">
-
-                        <div class="skill-icon">
-                            ⚙
-                        </div>
-
-                        <h3>
-                            Development Tools
-                        </h3>
-
-                        <p>
-                            Tools I use to write, test,
-                            manage and deploy my projects.
-                        </p>
-
-
-                        <div class="skill-tags">
-
-                            <span>Git</span>
-                            <span>GitHub</span>
-                            <span>VS Code</span>
-                            <span>Chrome DevTools</span>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <article class="skill-card">
-
-                        <div class="skill-icon">
-                            +
-                        </div>
-
-                        <h3>
-                            Currently Learning
-                        </h3>
-
-                        <p>
-                            Technologies I'm exploring as
-                            I continue developing my skills.
-                        </p>
-
-
-                        <div class="skill-tags">
-
-                            <span>JavaScript</span>
-                            <span>APIs</span>
-                            <span>React</span>
-                            <span>Backend Development</span>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             PROJECTS
-        ========================== -->
-
-        <section
-            id="projects"
-            class="section projects-section"
-        >
-
-            <div class="container">
-
-
-                <div class="section-header">
-
-                    <span class="section-label">
-                        PROJECTS
-                    </span>
-
-                    <h2 class="section-title">
-                        Things I've built.
+                <!-- Section heading -->
+
+                <div class="section-heading reveal">
+
+                    <p class="section-eyebrow">
+                        About Me
+                    </p>
+
+                    <h2
+                        id="about-title"
+                        class="section-title"
+                    >
+                        Building for the web
                     </h2>
 
                     <p class="section-description">
-                        A selection of projects I've created
-                        while learning web development and
-                        improving my skills.
+                        A practical approach to learning, building
+                        and improving as a developer.
                     </p>
 
                 </div>
 
 
+                <!-- About grid -->
 
-                <!-- FEATURED PROJECT -->
-
-                <article class="featured-project">
-
-                    <div class="featured-project-image">
-
-                        <img
-                            src="images/portfolio.png"
-                            alt="Personal dashboard project screenshot"
-                        >
-
-                        <div class="featured-label">
-                            Featured Project
-                        </div>
-
-                    </div>
+                <div class="about-grid">
 
 
-                    <div class="featured-project-content">
+                    <!-- About content -->
 
-                        <span class="project-type">
-                            WEB APPLICATION
-                        </span>
-
-                        <h3>
-                            Personal Dashboard
-                        </h3>
+                    <div class="about-content reveal">
 
                         <p>
-                            A clean and responsive personal
-                            dashboard designed to organize
-                            tasks, notes, useful links and
-                            everyday information in one place.
+                            I'm a web developer focused on building
+                            modern, responsive and accessible websites
+                            and web applications.
                         </p>
 
+                        <p>
+                            I enjoy turning ideas into practical
+                            interfaces and improving my skills through
+                            real-world projects.
+                        </p>
 
-                        <div class="project-tags">
+                        <p>
+                            My current focus is front-end development
+                            with HTML, CSS and JavaScript, together
+                            with Git, GitHub and GitHub Pages.
+                        </p>
 
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Responsive Design</span>
+                    </div>
+
+
+                    <!-- Learning timeline -->
+
+                    <div class="timeline reveal">
+
+                        <div class="timeline-item">
+
+                            <span class="timeline-number">
+                                01
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Learn
+                                </h3>
+
+                                <p>
+                                    Strengthening my understanding of
+                                    modern front-end development.
+                                </p>
+
+                            </div>
 
                         </div>
 
 
-                        <div class="project-buttons">
+                        <div class="timeline-item">
 
-                            <a
-                                href="#"
-                                class="btn primary-btn"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Live Demo
-                            </a>
+                            <span class="timeline-number">
+                                02
+                            </span>
 
-                            <a
-                                href="#"
-                                class="btn secondary-btn"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                View Code
-                            </a>
+                            <div>
+
+                                <h3>
+                                    Build
+                                </h3>
+
+                                <p>
+                                    Creating practical projects that
+                                    solve real problems.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <span class="timeline-number">
+                                03
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Improve
+                                </h3>
+
+                                <p>
+                                    Refactoring, testing and improving
+                                    each project over time.
+                                </p>
+
+                            </div>
 
                         </div>
 
                     </div>
 
-                </article>
+                </div>
 
 
+                <!-- Technologies -->
 
-                <!-- OTHER PROJECTS -->
+                <div class="technologies reveal">
 
-                <div class="project-grid">
+                    <div class="section-heading">
+
+                        <p class="section-eyebrow">
+                            Technologies
+                        </p>
+
+                        <h3 class="section-title">
+                            Tools I use
+                        </h3>
+
+                    </div>
 
 
-                    <!-- CALCULATOR -->
+                    <div class="technology-grid">
 
-                    <article class="project-card">
-
-                        <div class="project-image">
-
-                            <img
-                                src="images/portfolio.png"
-                                alt="Calculator app project screenshot"
-                            >
-
+                        <div class="technology-card">
+                            <span>HTML5</span>
                         </div>
 
-
-                        <div class="project-content">
-
-                            <p class="project-type">
-                                JAVASCRIPT APP
-                            </p>
-
-                            <h3>
-                                Calculator
-                            </h3>
-
-                            <p>
-                                A functional calculator built
-                                with JavaScript, featuring a
-                                clean interface and responsive
-                                layout.
-                            </p>
-
-
-                            <div class="project-tags">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-
-                            </div>
-
-
-                            <div class="project-buttons">
-
-                                <a
-                                    href="#"
-                                    class="project-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Live Demo →
-                                </a>
-
-                                <a
-                                    href="#"
-                                    class="project-link github-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    GitHub →
-                                </a>
-
-                            </div>
-
+                        <div class="technology-card">
+                            <span>CSS3</span>
                         </div>
 
-                    </article>
-
-
-
-                    <!-- PORTFOLIO -->
-
-                    <article class="project-card">
-
-                        <div class="project-image">
-
-                            <img
-                                src="images/portfolio.png"
-                                alt="Portfolio website project screenshot"
-                            >
-
+                        <div class="technology-card">
+                            <span>JavaScript</span>
                         </div>
 
-
-                        <div class="project-content">
-
-                            <p class="project-type">
-                                WEBSITE
-                            </p>
-
-                            <h3>
-                                Developer Portfolio
-                            </h3>
-
-                            <p>
-                                A responsive personal portfolio
-                                designed to showcase my projects,
-                                skills and development journey.
-                            </p>
-
-
-                            <div class="project-tags">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-
-                            </div>
-
-
-                            <div class="project-buttons">
-
-                                <a
-                                    href="#"
-                                    class="project-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Live Demo →
-                                </a>
-
-                                <a
-                                    href="#"
-                                    class="project-link github-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    GitHub →
-                                </a>
-
-                            </div>
-
+                        <div class="technology-card">
+                            <span>Git</span>
                         </div>
 
-                    </article>
-
-
-
-                    <!-- WORKOUT -->
-
-                    <article class="project-card">
-
-                        <div class="project-image">
-
-                            <img
-                                src="images/portfolio.png"
-                                alt="Workout program project screenshot"
-                            >
-
+                        <div class="technology-card">
+                            <span>GitHub</span>
                         </div>
 
-
-                        <div class="project-content">
-
-                            <p class="project-type">
-                                WEB APPLICATION
-                            </p>
-
-                            <h3>
-                                Workout Program
-                            </h3>
-
-                            <p>
-                                An interactive workout application
-                                for viewing exercises, tracking
-                                workouts and following a structured
-                                training plan.
-                            </p>
-
-
-                            <div class="project-tags">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-
-                            </div>
-
-
-                            <div class="project-buttons">
-
-                                <a
-                                    href="#"
-                                    class="project-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Live Demo →
-                                </a>
-
-                                <a
-                                    href="#"
-                                    class="project-link github-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    GitHub →
-                                </a>
-
-                            </div>
-
+                        <div class="technology-card">
+                            <span>GitHub Pages</span>
                         </div>
 
-                    </article>
-
+                    </div>
 
                 </div>
 
@@ -864,79 +448,608 @@
 
 
 
-        <!-- =========================
+        <!-- =================================================
+             SKILLS
+        ================================================== -->
+
+        <section
+            class="skills section"
+            id="skills"
+            aria-labelledby="skills-title"
+        >
+
+            <div class="container">
+
+
+                <!-- Section heading -->
+
+                <div class="section-heading reveal">
+
+                    <p class="section-eyebrow">
+                        Skills
+                    </p>
+
+                    <h2
+                        class="section-title"
+                        id="skills-title"
+                    >
+                        What I work with
+                    </h2>
+
+                    <p class="section-description">
+                        Practical skills developed through building
+                        real projects.
+                    </p>
+
+                </div>
+
+
+                <!-- Skills grid -->
+
+                <div class="skills-grid">
+
+
+                    <!-- HTML -->
+
+                    <article class="skill-card reveal">
+
+                        <span class="skill-number">
+                            01
+                        </span>
+
+                        <h3>
+                            HTML5
+                        </h3>
+
+                        <p>
+                            Semantic, accessible and well-structured
+                            markup for modern websites.
+                        </p>
+
+                    </article>
+
+
+                    <!-- CSS -->
+
+                    <article class="skill-card reveal">
+
+                        <span class="skill-number">
+                            02
+                        </span>
+
+                        <h3>
+                            CSS3
+                        </h3>
+
+                        <p>
+                            Responsive layouts, modern interfaces,
+                            animations and reusable styles.
+                        </p>
+
+                    </article>
+
+
+                    <!-- JavaScript -->
+
+                    <article class="skill-card reveal">
+
+                        <span class="skill-number">
+                            03
+                        </span>
+
+                        <h3>
+                            JavaScript
+                        </h3>
+
+                        <p>
+                            Interactive interfaces, DOM manipulation,
+                            application state and browser APIs.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Git -->
+
+                    <article class="skill-card reveal">
+
+                        <span class="skill-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Git & GitHub
+                        </h3>
+
+                        <p>
+                            Version control, repositories, commits
+                            and project collaboration.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Responsive Design -->
+
+                    <article class="skill-card reveal">
+
+                        <span class="skill-number">
+                            05
+                        </span>
+
+                        <h3>
+                            Responsive Design
+                        </h3>
+
+                        <p>
+                            Interfaces designed to work across mobile,
+                            tablet and desktop devices.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Problem Solving -->
+
+                    <article class="skill-card reveal">
+
+                        <span class="skill-number">
+                            06
+                        </span>
+
+                        <h3>
+                            Problem Solving
+                        </h3>
+
+                        <p>
+                            Breaking problems into manageable pieces
+                            and building practical solutions.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
+
+        <section
+            class="projects section"
+            id="projects"
+            aria-labelledby="projects-title"
+        >
+
+            <div class="container">
+
+
+                <!-- Section heading -->
+
+                <div class="section-heading reveal">
+
+                    <p class="section-eyebrow">
+                        Portfolio
+                    </p>
+
+                    <h2
+                        class="section-title"
+                        id="projects-title"
+                    >
+                        Selected Projects
+                    </h2>
+
+                    <p class="section-description">
+                        A selection of projects I've built while
+                        developing my front-end skills.
+                    </p>
+
+                </div>
+
+
+                <!-- Projects grid -->
+
+                <div class="projects-grid">
+
+
+                    <!-- =====================================
+                         PROJECT 01 — DASHBOARD
+                    ====================================== -->
+
+                    <article
+                        class="project-card project-card-featured reveal"
+                    >
+
+                        <div class="project-image">
+    <img
+        src="images/personal-dashboard.png"
+        alt="Preview of the Personal Dashboard web application"
+        loading="lazy"
+    >
+
+    <div class="project-overlay">
+        <span class="project-status">
+            In Development
+        </span>
+    </div>
+</div>
+
+
+                        <div class="project-content">
+
+                            <div class="project-header">
+
+                                <div>
+
+                                    <p class="project-type">
+                                        WEB APPLICATION
+                                    </p>
+
+                                    <h3 class="project-title">
+                                        Personal Dashboard
+                                    </h3>
+
+                                </div>
+
+                                <span class="project-number">
+                                    01
+                                </span>
+
+                            </div>
+
+
+                            <p class="project-description">
+                                A clean and responsive personal
+                                dashboard designed to organize
+                                tasks, notes, useful links and
+                                everyday information in one place.
+                            </p>
+
+
+                            <div
+                                class="project-technologies"
+                                aria-label="Technologies used"
+                            >
+
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>LocalStorage</span>
+
+                            </div>
+
+
+                            <div class="project-actions">
+
+                                <button
+                                    type="button"
+                                    class="project-button project-button-primary project-details-btn"
+                                    data-modal="dashboard"
+                                    aria-label="View details for Personal Dashboard"
+                                >
+                                    View Details
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =====================================
+                         PROJECT 02 — TODO LIST
+                    ====================================== -->
+
+                    <article
+                        class="project-card reveal"
+                    >
+
+                        <div class="project-image">
+    <img
+        src="images/todolist.png"
+        alt="Preview of the Todo List application"
+        loading="lazy"
+    >
+
+    <div class="project-overlay">
+        <span class="project-status">
+            Completed
+        </span>
+    </div>
+</div>
+
+
+                        <div class="project-content">
+
+                            <div class="project-header">
+
+                                <div>
+
+                                    <p class="project-type">
+                                        JAVASCRIPT APP
+                                    </p>
+
+                                    <h3 class="project-title">
+                                        Todo List
+                                    </h3>
+
+                                </div>
+
+                                <span class="project-number">
+                                    02
+                                </span>
+
+                            </div>
+
+
+                            <p class="project-description">
+                                A responsive task management
+                                application with task creation,
+                                editing, completion, deletion and
+                                LocalStorage persistence.
+                            </p>
+
+
+                            <div
+                                class="project-technologies"
+                                aria-label="Technologies used"
+                            >
+
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>LocalStorage</span>
+
+                            </div>
+
+
+                            <div class="project-actions">
+
+                                <button
+                                    type="button"
+                                    class="project-button project-button-secondary project-details-btn"
+                                    data-modal="todolist"
+                                    aria-label="View details for Todo List"
+                                >
+                                    Details
+                                </button>
+
+                                <a
+                                    href="https://hansoinner.github.io/todo-list/"
+                                    class="project-button project-button-primary"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Live Demo
+                                </a>
+
+                                <a
+                                    href="https://github.com/hansoinner/todo-list"
+                                    class="project-button project-button-secondary"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =====================================
+                         PROJECT 03 — PORTFOLIO
+                    ====================================== -->
+
+                    <article
+                        class="project-card reveal"
+                    >
+
+                        <div class="project-image">
+    <img
+        src="images/portfolio1.png"
+        alt="Preview of the Developer Portfolio website"
+        loading="lazy"
+    >
+
+    <div class="project-overlay">
+        <span class="project-status">
+            Completed
+        </span>
+    </div>
+</div>
+
+
+                        <div class="project-content">
+
+                            <div class="project-header">
+
+                                <div>
+
+                                    <p class="project-type">
+                                        WEBSITE
+                                    </p>
+
+                                    <h3 class="project-title">
+                                        Developer Portfolio
+                                    </h3>
+
+                                </div>
+
+                                <span class="project-number">
+                                    03
+                                </span>
+
+                            </div>
+
+
+                            <p class="project-description">
+                                A responsive personal portfolio
+                                website created to showcase my
+                                development skills, projects and
+                                learning progress.
+                            </p>
+
+
+                            <div
+                                class="project-technologies"
+                                aria-label="Technologies used"
+                            >
+
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Git</span>
+                                <span>GitHub Pages</span>
+
+                            </div>
+
+
+                            <div class="project-actions">
+
+                                <button
+                                    type="button"
+                                    class="project-button project-button-secondary project-details-btn"
+                                    data-modal="portfolio"
+                                    aria-label="View details for Developer Portfolio"
+                                >
+                                    Details
+                                </button>
+
+                                <a
+                                    href="https://hansoinner.github.io/portfolio/"
+                                    class="project-button project-button-primary"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Live Demo
+                                </a>
+
+                                <a
+                                    href="https://github.com/hansoinner/portfolio"
+                                    class="project-button project-button-secondary"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
              PROJECT MODAL
-        ========================== -->
+        ================================================== -->
 
         <div
             class="project-modal"
             id="project-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+            aria-describedby="modal-description"
             aria-hidden="true"
         >
 
             <div class="modal-overlay"></div>
 
 
-            <div
-                class="modal-content"
-                role="dialog"
-                aria-modal="true"
-                aria-labelledby="modal-title"
-            >
+            <div class="modal-container">
 
-                <button
-                    class="modal-close"
-                    id="modal-close"
-                    aria-label="Close project details"
-                    type="button"
-                >
-                    &times;
-                </button>
+                <div class="modal-content">
 
-
-                <p
-                    class="project-type"
-                    id="modal-type"
-                >
-                    PROJECT
-                </p>
-
-                <h2 id="modal-title">
-                    Project Title
-                </h2>
-
-                <p id="modal-description">
-                    Project description.
-                </p>
-
-
-                <div
-                    class="modal-technologies"
-                    id="modal-technologies"
-                ></div>
-
-
-                <div class="modal-actions">
-
-                    <a
-                        href="#"
-                        id="modal-demo"
-                        class="btn primary-btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <button
+                        class="modal-close"
+                        id="modal-close"
+                        type="button"
+                        aria-label="Close project details"
                     >
-                        Live Demo
-                    </a>
+                        <span aria-hidden="true">
+                            &times;
+                        </span>
+                    </button>
 
-                    <a
-                        href="#"
-                        id="modal-github"
-                        class="btn secondary-btn"
-                        target="_blank"
-                        rel="noopener noreferrer"
+
+                    <p
+                        class="modal-type"
+                        id="modal-type"
                     >
-                        GitHub
-                    </a>
+                    </p>
+
+
+                    <h2
+                        class="modal-title"
+                        id="modal-title"
+                    >
+                    </h2>
+
+
+                    <p
+                        class="modal-description"
+                        id="modal-description"
+                    >
+                    </p>
+
+
+                    <div class="modal-technologies">
+
+                        <h3>
+                            Technologies
+                        </h3>
+
+                        <div
+                            class="modal-technology-list"
+                            id="modal-technologies-list"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <div class="modal-actions">
+
+                        <a
+                            href="#"
+                            class="button button-primary"
+                            id="modal-demo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Live Demo
+                        </a>
+
+                        <a
+                            href="#"
+                            class="button button-secondary"
+                            id="modal-github"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -946,159 +1059,288 @@
 
 
 
-        <!-- =========================
+        <!-- =================================================
              CONTACT
-        ========================== -->
+        ================================================== -->
 
         <section
+            class="contact section"
             id="contact"
-            class="section contact-section"
+            aria-labelledby="contact-title"
         >
 
-            <div class="container contact-container">
-
-                <p class="section-label">
-                    CONTACT
-                </p>
-
-                <h2 class="section-title">
-                    Let's work together.
-                </h2>
-
-                <p class="contact-intro">
-                    Have a project, idea, or question?
-                    Send me a message and I'll get back
-                    to you.
-                </p>
+            <div class="container">
 
 
-                <form
-                    id="contact-form"
-                    class="contact-form"
-                    action="https://formspree.io/f/meajrkyn"
-                    method="POST"
-                    novalidate
-                >
+                <!-- Section heading -->
 
-                    <input
-                        type="hidden"
-                        name="_subject"
-                        value="New Portfolio Contact"
+                <div class="section-heading reveal">
+
+                    <p class="section-eyebrow">
+                        Contact
+                    </p>
+
+                    <h2
+                        class="section-title"
+                        id="contact-title"
+                    >
+                        Let's work together
+                    </h2>
+
+                    <p class="section-description">
+                        Have a project, opportunity or question?
+                        Send me a message.
+                    </p>
+
+                </div>
+
+
+                <!-- Contact grid -->
+
+                <div class="contact-grid">
+
+
+                    <!-- Contact information -->
+
+                    <div class="contact-info reveal">
+
+                        <h3>
+                            Get in touch
+                        </h3>
+
+                        <p>
+                            I'm always interested in discussing
+                            web development, projects and new
+                            opportunities.
+                        </p>
+
+
+                        <div class="contact-links">
+
+                            <a
+                                href="mailto:hello@example.com"
+                                class="contact-link"
+                            >
+                                <span>
+                                    Email
+                                </span>
+
+                                <span>
+                                    hello@example.com
+                                </span>
+                            </a>
+
+
+                            <a
+                                href="https://github.com/hansoinner"
+                                class="contact-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span>
+                                    GitHub
+                                </span>
+
+                                <span>
+                                    github.com/hansoinner
+                                </span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Contact form -->
+
+                    <form
+                        class="contact-form reveal"
+                        id="contact-form"
+                        action="https://formspree.io/f/meajrkyn"
+                        method="POST"
+                        novalidate
                     >
 
-
-                    <div class="form-group">
-
-                        <label for="name">
-                            Name
-                        </label>
-
                         <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Your name"
-                            autocomplete="name"
-                            required
+                            type="hidden"
+                            name="_subject"
+                            value="New Portfolio Contact"
                         >
 
-                        <small
-                            class="form-error"
-                            id="name-error"
-                        ></small>
 
-                    </div>
+                        <!-- Name -->
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                autocomplete="name"
+                                placeholder="Your name"
+                                required
+                                aria-describedby="name-error"
+                            >
+
+                            <p
+                                class="form-error"
+                                id="name-error"
+                                aria-live="polite"
+                            >
+                            </p>
+
+                        </div>
 
 
-                    <div class="form-group">
+                        <!-- Email -->
 
-                        <label for="email">
-                            Email
-                        </label>
+                        <div class="form-group">
 
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="you@example.com"
-                            autocomplete="email"
-                            required
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                placeholder="you@example.com"
+                                required
+                                aria-describedby="email-error"
+                            >
+
+                            <p
+                                class="form-error"
+                                id="email-error"
+                                aria-live="polite"
+                            >
+                            </p>
+
+                        </div>
+
+
+                        <!-- Message -->
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Tell me about your project..."
+                                required
+                                aria-describedby="message-error"
+                            ></textarea>
+
+                            <p
+                                class="form-error"
+                                id="message-error"
+                                aria-live="polite"
+                            >
+                            </p>
+
+                        </div>
+
+
+                        <!-- Submit -->
+
+                        <button
+                            type="submit"
+                            class="button button-primary form-submit"
                         >
-
-                        <small
-                            class="form-error"
-                            id="email-error"
-                        ></small>
-
-                    </div>
+                            Send Message
+                        </button>
 
 
-                    <div class="form-group">
+                        <!-- Success message -->
 
-                        <label for="message">
-                            Message
-                        </label>
+                        <p
+                            class="form-success"
+                            id="form-success"
+                            role="status"
+                            aria-live="polite"
+                        >
+                        </p>
 
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="6"
-                            placeholder="Tell me about your project..."
-                            required
-                        ></textarea>
+                    </form>
 
-                        <small
-                            class="form-error"
-                            id="message-error"
-                        ></small>
-
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="btn primary-btn form-submit"
-                    >
-                        Send Message
-                    </button>
-
-
-                    <p
-                        id="form-success"
-                        class="form-success"
-                        role="status"
-                    ></p>
-
-                </form>
+                </div>
 
             </div>
 
         </section>
 
-
     </main>
 
 
 
-    <!-- =========================
+    <!-- =====================================================
          FOOTER
-    ========================== -->
+    ====================================================== -->
 
-    <footer>
+    <footer class="footer">
 
-        <p>
-            &copy;
-            <span id="year"></span>
-            Sondre.
-            All rights reserved.
-        </p>
+        <div class="container footer-content">
+
+
+            <!-- Copyright -->
+
+            <p class="footer-copy">
+                &copy;
+                <span id="year"></span>
+                Sondre Giæver. All rights reserved.
+            </p>
+
+
+            <!-- Footer navigation -->
+
+            <nav
+                class="footer-nav"
+                aria-label="Footer navigation"
+            >
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#projects">
+                    Projects
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
 
     </footer>
 
 
 
-    <script src="script.js"></script>
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="script.js"
+        defer
+    ></script>
 
 </body>
-
 </html>
