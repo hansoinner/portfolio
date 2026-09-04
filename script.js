@@ -10,20 +10,20 @@
 
 const projects = {
     dashboard: {
-        title: "Personal Dashboard",
-        type: "WEB APPLICATION",
-        description:
-            "A clean and responsive personal dashboard designed to organize tasks, notes, useful links and everyday information in one place.",
-        technologies: [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "LocalStorage",
-            "Responsive Design"
-        ],
-        demo: "#",
-        github: "#"
-    },
+    title: "Personal Dashboard",
+    type: "WEB APPLICATION",
+    description:
+        "A modern and responsive personal dashboard designed to organize tasks, track progress, manage notes and goals, and keep everyday information in one place.",
+    technologies: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "LocalStorage",
+        "Responsive Design"
+    ],
+    demo: "https://hansoinner.github.io/personal-dashboard/",
+    github: "https://github.com/hansoinner/personal-dashboard"
+},
 
     todolist: {
         title: "Todo List",
