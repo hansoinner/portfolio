@@ -75,12 +75,22 @@ const currentYear = document.getElementById("year");
    MOBILE NAVIGATION
 ========================================================= */
 
+function updateMenuAccessibility(isOpen) {
+    if (!menuToggle) return;
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+}
+
 function openMobileMenu() {
     if (!menuToggle || !navigation) return;
 
     menuToggle.classList.add("active");
     navigation.classList.add("active");
-    menuToggle.setAttribute("aria-expanded", "true");
+    updateMenuAccessibility(true);
     document.body.classList.add("menu-open");
 }
 
@@ -89,7 +99,7 @@ function closeMobileMenu() {
 
     menuToggle.classList.remove("active");
     navigation.classList.remove("active");
-    menuToggle.setAttribute("aria-expanded", "false");
+    updateMenuAccessibility(false);
     document.body.classList.remove("menu-open");
 }
 
@@ -386,7 +396,7 @@ if ("IntersectionObserver" in window) {
 ========================================================= */
 
 if (menuToggle) {
-    menuToggle.setAttribute("aria-expanded", "false");
+    updateMenuAccessibility(false);
 }
 
 if (projectModal) {
