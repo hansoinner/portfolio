@@ -921,6 +921,14 @@ ul {
     transform: translateY(0);
 }
 
+/* Keep the hero crisp on first paint. Scroll-reveal compositing can make
+   large text and vector-like shapes appear temporarily soft on some browsers. */
+.hero .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+}
+
 @media (max-width: 1000px) {
     .hero-grid {
         grid-template-columns: minmax(0, 1fr) 280px;
