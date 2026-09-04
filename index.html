@@ -28,9 +28,87 @@
 
     <title>Sondre G | Web Developer</title>
     <link rel="canonical" href="https://hansoinner.github.io/portfolio/">
-
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232563eb'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Arial,sans-serif' font-size='48' font-weight='700' fill='white'%3ESG%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://hansoinner.github.io/portfolio/#person",
+                "name": "Sondre G",
+                "url": "https://hansoinner.github.io/portfolio/",
+                "jobTitle": "Web Developer",
+                "sameAs": [
+                    "https://github.com/hansoinner"
+                ],
+                "knowsAbout": [
+                    "HTML5",
+                    "CSS3",
+                    "JavaScript",
+                    "Responsive Web Design",
+                    "Git",
+                    "GitHub"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://hansoinner.github.io/portfolio/#website",
+                "url": "https://hansoinner.github.io/portfolio/",
+                "name": "Sondre G | Web Developer",
+                "description": "Web developer portfolio showcasing responsive websites and web applications built with HTML, CSS and JavaScript.",
+                "publisher": {
+                    "@id": "https://hansoinner.github.io/portfolio/#person"
+                },
+                "inLanguage": "en"
+            },
+            {
+                "@type": "CollectionPage",
+                "@id": "https://hansoinner.github.io/portfolio/#portfolio",
+                "url": "https://hansoinner.github.io/portfolio/",
+                "name": "Sondre G Web Developer Portfolio",
+                "isPartOf": {
+                    "@id": "https://hansoinner.github.io/portfolio/#website"
+                },
+                "about": {
+                    "@id": "https://hansoinner.github.io/portfolio/#person"
+                },
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "numberOfItems": 4,
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Personal Dashboard",
+                            "url": "https://hansoinner.github.io/personal-dashboard/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Todo List",
+                            "url": "https://hansoinner.github.io/todo-list/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Developer Portfolio",
+                            "url": "https://hansoinner.github.io/portfolio/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 4,
+                            "name": "Weather App",
+                            "url": "https://hansoinner.github.io/weather-app/"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -39,15 +117,13 @@
     <header class="header">
         <nav class="navbar container" aria-label="Main navigation">
             <a href="#home" class="logo" aria-label="Sondre G - Home">SG</a>
-
             <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="nav-links" aria-expanded="false">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </button>
-
             <div class="nav-links" id="nav-links">
-                <a href="#home" class="nav-link active">Home</a>
+                <a href="#home" class="nav-link active" aria-current="page">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#projects" class="nav-link">Projects</a>
@@ -64,20 +140,15 @@
                     <h1 class="hero-title" id="hero-title">Sondre G</h1>
                     <p class="hero-subtitle">Web Developer</p>
                     <p class="hero-description">I build clean, responsive and user-focused websites and web applications using modern HTML, CSS and JavaScript.</p>
-
                     <div class="hero-actions">
                         <a href="#projects" class="button button-primary">View My Work</a>
                         <a href="#contact" class="button button-secondary">Get In Touch</a>
                     </div>
-
                     <div class="hero-socials" aria-label="Social links">
                         <a href="https://github.com/hansoinner" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
                     </div>
                 </div>
-
-                <div class="profile-placeholder reveal" role="img" aria-label="Sondre G profile placeholder">
-                    <span aria-hidden="true">SG</span>
-                </div>
+                <div class="profile-placeholder reveal" role="img" aria-label="Sondre G profile placeholder"><span aria-hidden="true">SG</span></div>
             </div>
         </section>
 
@@ -88,42 +159,22 @@
                     <h2 id="about-title" class="section-title">Building for the web</h2>
                     <p class="section-description">A practical approach to learning, building and improving as a developer.</p>
                 </div>
-
                 <div class="about-grid">
                     <div class="about-content reveal">
                         <p>I'm a web developer focused on building modern, responsive and accessible websites and web applications.</p>
                         <p>I enjoy turning ideas into practical interfaces and improving my skills through real-world projects.</p>
                         <p>My current focus is front-end development with HTML, CSS and JavaScript, together with Git, GitHub and GitHub Pages.</p>
                     </div>
-
                     <div class="timeline reveal">
-                        <div class="timeline-item">
-                            <span class="timeline-number" aria-hidden="true">01</span>
-                            <div><h3>Learn</h3><p>Strengthening my understanding of modern front-end development.</p></div>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="timeline-number" aria-hidden="true">02</span>
-                            <div><h3>Build</h3><p>Creating practical projects that solve real problems.</p></div>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="timeline-number" aria-hidden="true">03</span>
-                            <div><h3>Improve</h3><p>Refactoring, testing and improving each project over time.</p></div>
-                        </div>
+                        <div class="timeline-item"><span class="timeline-number" aria-hidden="true">01</span><div><h3>Learn</h3><p>Strengthening my understanding of modern front-end development.</p></div></div>
+                        <div class="timeline-item"><span class="timeline-number" aria-hidden="true">02</span><div><h3>Build</h3><p>Creating practical projects that solve real problems.</p></div></div>
+                        <div class="timeline-item"><span class="timeline-number" aria-hidden="true">03</span><div><h3>Improve</h3><p>Refactoring, testing and improving each project over time.</p></div></div>
                     </div>
                 </div>
-
                 <div class="technologies reveal">
-                    <div class="section-heading">
-                        <p class="section-eyebrow">Technologies</p>
-                        <h3 class="section-title">Tools I use</h3>
-                    </div>
+                    <div class="section-heading"><p class="section-eyebrow">Technologies</p><h3 class="section-title">Tools I use</h3></div>
                     <div class="technology-grid">
-                        <div class="technology-card"><span>HTML5</span></div>
-                        <div class="technology-card"><span>CSS3</span></div>
-                        <div class="technology-card"><span>JavaScript</span></div>
-                        <div class="technology-card"><span>Git</span></div>
-                        <div class="technology-card"><span>GitHub</span></div>
-                        <div class="technology-card"><span>GitHub Pages</span></div>
+                        <div class="technology-card"><span>HTML5</span></div><div class="technology-card"><span>CSS3</span></div><div class="technology-card"><span>JavaScript</span></div><div class="technology-card"><span>Git</span></div><div class="technology-card"><span>GitHub</span></div><div class="technology-card"><span>GitHub Pages</span></div>
                     </div>
                 </div>
             </div>
@@ -131,12 +182,7 @@
 
         <section class="skills section" id="skills" aria-labelledby="skills-title">
             <div class="container">
-                <div class="section-heading reveal">
-                    <p class="section-eyebrow">Skills</p>
-                    <h2 class="section-title" id="skills-title">What I work with</h2>
-                    <p class="section-description">Practical skills developed through building real projects.</p>
-                </div>
-
+                <div class="section-heading reveal"><p class="section-eyebrow">Skills</p><h2 class="section-title" id="skills-title">What I work with</h2><p class="section-description">Practical skills developed through building real projects.</p></div>
                 <div class="skills-grid">
                     <article class="skill-card reveal"><span class="skill-number" aria-hidden="true">01</span><h3>HTML5</h3><p>Semantic, accessible and well-structured markup for modern websites.</p></article>
                     <article class="skill-card reveal"><span class="skill-number" aria-hidden="true">02</span><h3>CSS3</h3><p>Responsive layouts, modern interfaces, animations and reusable styles.</p></article>
@@ -150,91 +196,23 @@
 
         <section class="projects section" id="projects" aria-labelledby="projects-title">
             <div class="container">
-                <div class="section-heading reveal">
-                    <p class="section-eyebrow">Portfolio</p>
-                    <h2 class="section-title" id="projects-title">Selected Projects</h2>
-                    <p class="section-description">A selection of projects I've built while developing my front-end skills.</p>
-                </div>
-
+                <div class="section-heading reveal"><p class="section-eyebrow">Portfolio</p><h2 class="section-title" id="projects-title">Selected Projects</h2><p class="section-description">A selection of projects I've built while developing my front-end skills.</p></div>
                 <div class="projects-grid">
                     <article class="project-card project-card-featured reveal">
-                        <div class="project-image">
-                            <img src="images/personal-dashboard.png" alt="Preview of the Personal Dashboard web application" loading="lazy" decoding="async">
-                            <div class="project-overlay"><span class="project-status">In Development</span></div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <div><p class="project-type">WEB APPLICATION</p><h3 class="project-title">Personal Dashboard</h3></div>
-                                <span class="project-number" aria-hidden="true">01</span>
-                            </div>
-                            <p class="project-description">A responsive personal productivity dashboard featuring task management, notes, useful links, statistics and persistent browser storage.</p>
-                            <div class="project-technologies" aria-label="Technologies used"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>LocalStorage</span></div>
-                            <div class="project-actions">
-                                <button type="button" class="project-button project-button-secondary project-details-btn" data-modal="dashboard" aria-label="View details for Personal Dashboard">Details</button>
-                                <a href="https://hansoinner.github.io/personal-dashboard/" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                                <a href="https://github.com/hansoinner/personal-dashboard" class="project-button project-button-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            </div>
-                        </div>
+                        <div class="project-image"><img src="images/personal-dashboard.png" alt="Preview of the Personal Dashboard web application" loading="lazy" decoding="async"><div class="project-overlay"><span class="project-status">In Development</span></div></div>
+                        <div class="project-content"><div class="project-header"><div><p class="project-type">WEB APPLICATION</p><h3 class="project-title">Personal Dashboard</h3></div><span class="project-number" aria-hidden="true">01</span></div><p class="project-description">A responsive personal productivity dashboard featuring task management, notes, useful links, statistics and persistent browser storage.</p><div class="project-technologies" aria-label="Technologies used"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>LocalStorage</span></div><div class="project-actions"><button type="button" class="project-button project-button-secondary project-details-btn" data-modal="dashboard" aria-label="View details for Personal Dashboard">Details</button><a href="https://hansoinner.github.io/personal-dashboard/" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer">Live Demo</a><a href="https://github.com/hansoinner/personal-dashboard" class="project-button project-button-secondary" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
                     </article>
-
                     <article class="project-card reveal">
-                        <div class="project-image">
-                            <img src="images/todolist.png" alt="Preview of the Todo List application" loading="lazy" decoding="async">
-                            <div class="project-overlay"><span class="project-status">Completed</span></div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <div><p class="project-type">JAVASCRIPT APP</p><h3 class="project-title">Todo List</h3></div>
-                                <span class="project-number" aria-hidden="true">02</span>
-                            </div>
-                            <p class="project-description">A responsive task management application with task creation, completion, filtering, deletion and persistent LocalStorage data.</p>
-                            <div class="project-technologies" aria-label="Technologies used"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>LocalStorage</span></div>
-                            <div class="project-actions">
-                                <button type="button" class="project-button project-button-secondary project-details-btn" data-modal="todolist" aria-label="View details for Todo List">Details</button>
-                                <a href="https://hansoinner.github.io/todo-list/" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                                <a href="https://github.com/hansoinner/todo-list" class="project-button project-button-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            </div>
-                        </div>
+                        <div class="project-image"><img src="images/todolist.png" alt="Preview of the Todo List application" loading="lazy" decoding="async"><div class="project-overlay"><span class="project-status">Completed</span></div></div>
+                        <div class="project-content"><div class="project-header"><div><p class="project-type">JAVASCRIPT APP</p><h3 class="project-title">Todo List</h3></div><span class="project-number" aria-hidden="true">02</span></div><p class="project-description">A responsive task management application with task creation, completion, filtering, deletion and persistent LocalStorage data.</p><div class="project-technologies" aria-label="Technologies used"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>LocalStorage</span></div><div class="project-actions"><button type="button" class="project-button project-button-secondary project-details-btn" data-modal="todolist" aria-label="View details for Todo List">Details</button><a href="https://hansoinner.github.io/todo-list/" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer">Live Demo</a><a href="https://github.com/hansoinner/todo-list" class="project-button project-button-secondary" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
                     </article>
-
                     <article class="project-card reveal">
-                        <div class="project-image">
-                            <img src="images/portfolio1.png" alt="Preview of the Sondre G developer portfolio website" loading="lazy" decoding="async">
-                            <div class="project-overlay"><span class="project-status">Completed</span></div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <div><p class="project-type">WEBSITE</p><h3 class="project-title">Developer Portfolio</h3></div>
-                                <span class="project-number" aria-hidden="true">03</span>
-                            </div>
-                            <p class="project-description">A responsive personal portfolio website built to showcase development skills, projects and learning progress.</p>
-                            <div class="project-technologies" aria-label="Technologies used"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>GitHub Pages</span></div>
-                            <div class="project-actions">
-                                <button type="button" class="project-button project-button-secondary project-details-btn" data-modal="portfolio" aria-label="View details for Developer Portfolio">Details</button>
-                                <a href="https://hansoinner.github.io/portfolio/" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                                <a href="https://github.com/hansoinner/portfolio" class="project-button project-button-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            </div>
-                        </div>
+                        <div class="project-image"><img src="images/portfolio1.png" alt="Preview of the Sondre G developer portfolio website" loading="lazy" decoding="async"><div class="project-overlay"><span class="project-status">Completed</span></div></div>
+                        <div class="project-content"><div class="project-header"><div><p class="project-type">WEBSITE</p><h3 class="project-title">Developer Portfolio</h3></div><span class="project-number" aria-hidden="true">03</span></div><p class="project-description">A responsive personal portfolio website built to showcase development skills, projects and learning progress.</p><div class="project-technologies" aria-label="Technologies used"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>GitHub Pages</span></div><div class="project-actions"><button type="button" class="project-button project-button-secondary project-details-btn" data-modal="portfolio" aria-label="View details for Developer Portfolio">Details</button><a href="https://hansoinner.github.io/portfolio/" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer">Live Demo</a><a href="https://github.com/hansoinner/portfolio" class="project-button project-button-secondary" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
                     </article>
-
                     <article class="project-card reveal">
-                        <div class="project-image">
-                            <img src="images/weather-app.png" alt="Preview of the Weather App web application" loading="lazy" decoding="async">
-                            <div class="project-overlay"><span class="project-status">Completed</span></div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <div><p class="project-type">WEB APPLICATION</p><h3 class="project-title">Weather App</h3></div>
-                                <span class="project-number" aria-hidden="true">04</span>
-                            </div>
-                            <p class="project-description">A responsive weather application for searching cities and viewing current weather conditions, temperature, humidity and wind speed.</p>
-                            <div class="project-technologies" aria-label="Technologies used"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Fetch API</span></div>
-                            <div class="project-actions">
-                                <button type="button" class="project-button project-button-secondary project-details-btn" data-modal="weather" aria-label="View details for Weather App">Details</button>
-                                <a href="https://hansoinner.github.io/weather-app/" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                                <a href="https://github.com/hansoinner/weather-app" class="project-button project-button-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            </div>
-                        </div>
+                        <div class="project-image"><img src="images/weather-app.png" alt="Preview of the Weather App web application" loading="lazy" decoding="async"><div class="project-overlay"><span class="project-status">Completed</span></div></div>
+                        <div class="project-content"><div class="project-header"><div><p class="project-type">WEB APPLICATION</p><h3 class="project-title">Weather App</h3></div><span class="project-number" aria-hidden="true">04</span></div><p class="project-description">A responsive weather application for searching cities and viewing current weather conditions, temperature, humidity and wind speed.</p><div class="project-technologies" aria-label="Technologies used"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Fetch API</span></div><div class="project-actions"><button type="button" class="project-button project-button-secondary project-details-btn" data-modal="weather" aria-label="View details for Weather App">Details</button><a href="https://hansoinner.github.io/weather-app/" class="project-button project-button-primary" target="_blank" rel="noopener noreferrer">Live Demo</a><a href="https://github.com/hansoinner/weather-app" class="project-button project-button-secondary" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
                     </article>
                 </div>
             </div>
@@ -242,60 +220,28 @@
 
         <section class="contact section" id="contact" aria-labelledby="contact-title">
             <div class="container">
-                <div class="section-heading reveal">
-                    <p class="section-eyebrow">Contact</p>
-                    <h2 class="section-title" id="contact-title">Let's work together</h2>
-                    <p class="section-description">Have a project, opportunity or question? Send me a message.</p>
-                </div>
-
+                <div class="section-heading reveal"><p class="section-eyebrow">Contact</p><h2 class="section-title" id="contact-title">Let's work together</h2><p class="section-description">Have a project, opportunity or question? Send me a message.</p></div>
                 <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/xjkwzjqr" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" autocomplete="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" autocomplete="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-                    </div>
-                    <button type="submit" class="button button-primary">Send Message</button>
-                    <p class="form-status" id="form-success" role="status" aria-live="polite"></p>
+                    <div class="form-group"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+                    <div class="form-group"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+                    <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="6" required></textarea></div>
+                    <button class="button button-primary" type="submit">Send Message</button>
+                    <p class="form-status" id="form-success" aria-live="polite"></p>
                 </form>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Sondre G. All rights reserved.</p>
-        </div>
+        <div class="container"><p>&copy; <span id="year"></span> Sondre G. All rights reserved.</p></div>
     </footer>
 
-    <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="project-modal" id="project-modal" aria-hidden="true">
         <div class="modal-overlay"></div>
-        <div class="modal-container" role="document">
-            <button type="button" class="modal-close" id="modal-close" aria-label="Close project details">&times;</button>
-            <div class="modal-content">
-                <div class="modal-image">
-                    <img id="modal-image" src="" alt="" decoding="async">
-                </div>
-                <div class="modal-info">
-                    <p class="modal-type" id="modal-type"></p>
-                    <h2 class="modal-title" id="modal-title"></h2>
-                    <p class="modal-description" id="modal-description"></p>
-                    <div class="modal-technologies">
-                        <h3>Technologies</h3>
-                        <div class="modal-technologies-list" id="modal-technologies-list"></div>
-                    </div>
-                    <div class="modal-actions">
-                        <a id="modal-demo" class="button button-primary" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                        <a id="modal-github" class="button button-secondary" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-                </div>
-            </div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" id="modal-close" type="button" aria-label="Close project details">&times;</button>
+            <div class="modal-image-wrapper"><img id="modal-image" src="" alt="" decoding="async"></div>
+            <div class="modal-content"><p class="modal-type" id="modal-type"></p><h2 id="modal-title"></h2><p id="modal-description"></p><div class="modal-technologies" id="modal-technologies-list" aria-label="Project technologies"></div><div class="modal-actions"><a id="modal-demo" class="button button-primary" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a><a id="modal-github" class="button button-secondary" href="#" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
         </div>
     </div>
 
