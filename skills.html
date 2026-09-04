@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sondre G — Skills matrix showing front-end capabilities and project evidence.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://hansoinner.github.io/portfolio/skills.html">
+    <title>Skills Matrix | Sondre G</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="visual-polish.css">
+    <style>
+        .skills-page { padding: 7rem 0 5rem; }
+        .skills-intro { max-width: 760px; margin-bottom: 3rem; }
+        .skills-matrix { display: grid; gap: 1rem; }
+        .matrix-card { display: grid; grid-template-columns: minmax(150px, .7fr) 1.4fr 1fr; gap: 1.5rem; align-items: center; padding: 1.5rem; background: #fff; border: 1px solid rgba(15,23,42,.09); border-radius: 18px; box-shadow: 0 10px 30px rgba(15,23,42,.05); }
+        .matrix-tech { font-weight: 800; color: #0f172a; }
+        .matrix-capability { color: #475569; line-height: 1.65; }
+        .matrix-evidence { display: flex; flex-wrap: wrap; gap: .5rem; }
+        .evidence-link { display: inline-flex; padding: .45rem .7rem; border-radius: 999px; background: #eff6ff; color: #1d4ed8; font-size: .78rem; font-weight: 800; text-decoration: none; }
+        .evidence-link:hover, .evidence-link:focus-visible { background: #dbeafe; }
+        .skills-cta { margin-top: 3rem; display: flex; flex-wrap: wrap; gap: .75rem; }
+        @media (max-width: 760px) { .matrix-card { grid-template-columns: 1fr; gap: .75rem; } }
+        @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+    </style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="header">
+    <nav class="navbar container" aria-label="Main navigation">
+        <a href="index.html" class="logo" aria-label="Sondre G - Home">SG</a>
+        <div class="nav-links">
+            <a href="index.html#about" class="nav-link">About</a>
+            <a href="index.html#skills" class="nav-link active" aria-current="page">Skills</a>
+            <a href="index.html#projects" class="nav-link">Projects</a>
+            <a href="for-recruiters.html" class="nav-link">For Recruiters</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+</header>
+<main id="main-content" class="skills-page">
+    <div class="container">
+        <div class="skills-intro">
+            <p class="section-eyebrow">Skills Matrix</p>
+            <h1 class="section-title">Technology → Capability → Evidence</h1>
+            <p class="section-description">A practical overview of the technologies I use, what I can build with them, and where those skills are demonstrated in my portfolio.</p>
+        </div>
+        <section class="skills-matrix" aria-label="Skills and project evidence">
+            <article class="matrix-card"><h2 class="matrix-tech">HTML5</h2><p class="matrix-capability">Semantic, structured and accessibility-minded markup for maintainable interfaces.</p><div class="matrix-evidence"><a class="evidence-link" href="project.html?project=portfolio">Portfolio</a><a class="evidence-link" href="project.html?project=dashboard">Dashboard</a></div></article>
+            <article class="matrix-card"><h2 class="matrix-tech">CSS3</h2><p class="matrix-capability">Responsive layouts, reusable visual patterns, polished states and mobile-friendly UI.</p><div class="matrix-evidence"><a class="evidence-link" href="project.html?project=portfolio">Portfolio</a><a class="evidence-link" href="project.html?project=dashboard">Dashboard</a><a class="evidence-link" href="project.html?project=weather">Weather App</a></div></article>
+            <article class="matrix-card"><h2 class="matrix-tech">JavaScript</h2><p class="matrix-capability">DOM manipulation, application state, events, validation and interactive browser experiences.</p><div class="matrix-evidence"><a class="evidence-link" href="project.html?project=dashboard">Dashboard</a><a class="evidence-link" href="project.html?project=todolist">Todo List</a></div></article>
+            <article class="matrix-card"><h2 class="matrix-tech">Fetch API</h2><p class="matrix-capability">Asynchronous requests, API data handling and user-friendly loading and error states.</p><div class="matrix-evidence"><a class="evidence-link" href="project.html?project=weather">Weather App</a></div></article>
+            <article class="matrix-card"><h2 class="matrix-tech">LocalStorage</h2><p class="matrix-capability">Persistent client-side data for applications that retain user state between sessions.</p><div class="matrix-evidence"><a class="evidence-link" href="project.html?project=dashboard">Dashboard</a><a class="evidence-link" href="project.html?project=todolist">Todo List</a></div></article>
+            <article class="matrix-card"><h2 class="matrix-tech">Git &amp; GitHub</h2><p class="matrix-capability">Version control, focused commits, repositories, project history and collaborative-ready workflows.</p><div class="matrix-evidence"><a class="evidence-link" href="https://github.com/hansoinner/portfolio" target="_blank" rel="noopener noreferrer">Portfolio Repo</a><a class="evidence-link" href="https://github.com/hansoinner" target="_blank" rel="noopener noreferrer">GitHub Profile</a></div></article>
+            <article class="matrix-card"><h2 class="matrix-tech">GitHub Pages</h2><p class="matrix-capability">Deploying and maintaining responsive static websites using a practical production workflow.</p><div class="matrix-evidence"><a class="evidence-link" href="index.html">Portfolio</a><a class="evidence-link" href="https://hansoinner.github.io/todo-list/" target="_blank" rel="noopener noreferrer">Todo List</a><a class="evidence-link" href="https://hansoinner.github.io/weather-app/" target="_blank" rel="noopener noreferrer">Weather App</a></div></article>
+        </section>
+        <div class="skills-cta">
+            <a href="index.html#projects" class="button button-primary">View Projects</a>
+            <a href="resume.html" class="button button-secondary">View Resume</a>
+            <a href="for-recruiters.html" class="button button-secondary">For Recruiters</a>
+        </div>
+    </div>
+</main>
+<footer class="footer"><div class="container"><p>&copy; 2026 Sondre G. Built with HTML, CSS and JavaScript.</p></div></footer>
+</body>
+</html>
